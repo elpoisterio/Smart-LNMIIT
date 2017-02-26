@@ -3,13 +3,25 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
-    defaultConfig {
-        applicationId "io.elpoisterio.smartlnmiit"
-        minSdkVersion 19
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    def versionNameFile = file('version.properties')
+    if (versionNameFile.canRead()) {
+        def Properties versionProp = new Properties()
+        versionProp.load(new FileInputStream(versionNameFile))
+        def versionBuilds = versionProp['VERSION_BUILD'].toInteger() + 1
+        versionProp['VERSION_BUILD'] = versionBuilds.toString()
+        versionProp.store(versionNameFile.newWriter(), null)
+
+        defaultConfig {
+            applicationId "io.elpoisterio.smartlnmiit"
+            minSdkVersion 19
+            targetSdkVersion 25
+            versionCode 1
+            versionName "1.0.0." + versionBuilds
+            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        }
+    }else {
+        throw new GradleException("Version Props not found")
     }
     buildTypes {
         release {
