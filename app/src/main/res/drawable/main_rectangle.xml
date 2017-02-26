@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btn_background_shape">
+
+    <stroke
+        android:width="0dp"
+
+        android:color="@color/colorAccent" />
+    <corners android:radius="0dp"
+        />
+    <solid
+        android:color="#00D185"
+
+        />
+    <gradient
+        android:startColor="#003759"
+        android:angle="225"
+        android:type="linear"
+        android:useLevel="false"
+        android:centerColor="#008F7D"
+        android:endColor="#00FEA9"
+        />
+
+</shape>
