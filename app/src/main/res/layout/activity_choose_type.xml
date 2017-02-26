@@ -19,7 +19,7 @@
         card_view:cardCornerRadius="4dp"
         card_view:cardPreventCornerOverlap="false"
         card_view:contentPadding="8dp"
-        card_view:setRadius="4dp">
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         card_view:cardCornerRadius="4dp"
         card_view:cardPreventCornerOverlap="false"
         card_view:contentPadding="8dp"
-        card_view:setRadius="4dp">
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
         card_view:cardCornerRadius="4dp"
         card_view:cardPreventCornerOverlap="false"
         card_view:contentPadding="8dp"
-        card_view:setRadius="4dp">
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
