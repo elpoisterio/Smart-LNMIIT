@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#CB202D</color>
+    <color name="colorPrimaryDark">#D32F2F</color>
+    <color name="colorAccent">#3F51B5</color>
+     <color name="some_pink">#D2586F</color>
+    <color name="some__light_pink">#B02659</color>
+    <color name="xyx">#9E9E9E</color>
+    <color name="black">#252021</color>
+    <color name="white">#ffffff</color>
+    <color name="white_other">#fffcfc</color>
+    <color name="textColorPrimary">#ffffff</color>
+    <color name="windowBackground">#f5f5f5</color>
+    <color name="navigationBarColor">#9E9E9E</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="colorPrimary_two">#607d8b</color>
+    <color name="background">#E0E0E0</color>
+    <color name="red">#FF0000</color>
+    <color name="nored">#660000</color>
+    <color name="back">#e2e1e0</color>
+    <color name="snowdrift">#f5f5f5</color>
+    <color name="nero">#252021</color>
+    <color name="notif_bg">#e64a19</color>
+    <color name="text">#333333</color>
+    <color name="header_color">#00bfa5</color>
+    <color name="deep_purple">#673ab7</color>
+    <color name="blue">#2196f3</color>
+    <color name="yellow">#f4ff81</color>
+    <color name="white_text">#FFFAFB</color>
+    <color name="snackbar_color">#FFAB00 </color>
+    <color name="blue_login_check">#0091EA</color>
+    <color name="light_red">#ffebee</color>
+    <color name="light_green">#e8f5e9</color>
+    <color name="grey_shade">#676767</color>
+    <color name="red_tint_appeals">#EF9A9A</color>
+    <color name="green_tint_appeals">#A5D6A7</color>
 </resources>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Smart LNMIIT</string>
+    <string name="hint_email">email</string>
+    <string name="hint_password">password</string>
+    <string name="login">LOGIN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="faculty">FACULTY</string>
+    <string name="student_alumni">STUDENT/ALUMNI</string>
+    <string name="non_teaching_staff">NON- TEACHING STAFF</string>
 </resources>
