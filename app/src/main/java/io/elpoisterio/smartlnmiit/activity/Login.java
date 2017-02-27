@@ -1,7 +1,9 @@
-package io.elpoisterio.smartlnmiit;
+package io.elpoisterio.smartlnmiit.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import io.elpoisterio.smartlnmiit.R;
 
 public class Login extends AppCompatActivity {
 
