@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.0_e8f01b2d80736ff0a056dc425c78a709e989b8b8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_565da48a4089864cc481eec71246d92b1fbb6b31\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.0_38f92fcc610ebace50d4c6e14d3658406e0d29f4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="922da7c77ad8a3990d8fc8f3a32f11a54a6b3fc3">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_efe368a964d734ea150d303e92129af3edc4b225\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.0_e199596ec8f35e99cd8b4c9d8707bca0c25e5548\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8a372c4191f80489770a231f7be4820b204b886a">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-25.0.0_7d568e03683c6b3da1525da84a3d0d0548128fdf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3b6afa56fb5ec59c061fc8fa6d40983073732c85">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1f6a73de738bfb6bcec719cde77cad528a6777cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.0_81ba1091300d6b1ffc94d460739fcbc123be6d0d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\design\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.0.0_540d05fd3171f3425c368eac788bb6d4acb1fe90\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_7834ddc6bc3b0f6fafe9b7d89a2cdda23229ba54\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.0_6d716c79a35d4ba24db28ab52bcd4107e55f2389\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.0_148a1426b2ebafab983df18a617276e08b656cb4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.0_11cec1d0231b5b7c05f03f52c6cde356e091b544\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\guava\guava\18.0\guava-18.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\guava-18.0_23ae9d619c9ad952ac11ce7bff78df802e3e98c2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.github.satyan\sugar\1.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ac045b53684345f4ec8468477e8fc5034d0d2bfd">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.satyan-sugar-1.4_c351c5a2a2905c22eb28a55f8716a28388a9ed7a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.0_98bd24d733f79c50674b110bf66176a7c1633ee0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.0.0_365ae4c87040281123bc42cd813b3c643a87215c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.0_a4bf74d72b894d08d7496a59ad40eed2e71f4647\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_56e7c10b67266920a52d68c4b105ce38351c75c9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_08ed79868f1ec893b338f1d2abe1328ebd861fbf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.0_17e2c08cb64321495e19954bf5cf7e0cc4f75413\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.0_7df4bcb3cba463c5381ce06a64b0bec917757416\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_a9dfda6201adbbcae0c594035ae2a10be511e167\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_7eafa4fedee04194578e2dcf0b1246e6a3391334\classes.dex" />
+    </item>
+
+</items>
