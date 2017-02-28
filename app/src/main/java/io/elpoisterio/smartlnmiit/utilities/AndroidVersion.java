@@ -1,4 +1,4 @@
-package io.elpoisterio.smartlnmiit;
+package io.elpoisterio.smartlnmiit.utilities;
 
 /**
  * Created by lenovo on 28-02-2017.

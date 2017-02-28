@@ -1,4 +1,4 @@
-package io.elpoisterio.smartlnmiit;
+package io.elpoisterio.smartlnmiit.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +10,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import java.util.ArrayList;
+
+import io.elpoisterio.smartlnmiit.AndroidVersion;
+import io.elpoisterio.smartlnmiit.DataAdapter;
+import io.elpoisterio.smartlnmiit.R;
 
 public class MainActivity extends AppCompatActivity {
 

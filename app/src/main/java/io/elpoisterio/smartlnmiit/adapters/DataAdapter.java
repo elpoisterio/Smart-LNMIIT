@@ -1,4 +1,4 @@
-package io.elpoisterio.smartlnmiit;
+package io.elpoisterio.smartlnmiit.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import io.elpoisterio.smartlnmiit.AndroidVersion;
+import io.elpoisterio.smartlnmiit.R;
 
 /**
  * Created by lenovo on 28-02-2017.
