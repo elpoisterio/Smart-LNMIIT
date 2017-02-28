@@ -19,23 +19,23 @@ import io.elpoisterio.smartlnmiit.R;
  * Created by lenovo on 28-02-2017.
  */
 
-public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
+public class HomeRecylerAdapter extends RecyclerView.Adapter<HomeRecylerAdapter.ViewHolder> {
     private ArrayList<AndroidVersion> android;
     private Context context;
 
-    public DataAdapter(Context context,ArrayList<AndroidVersion> android) {
+    public HomeRecylerAdapter(Context context, ArrayList<AndroidVersion> android) {
         this.android = android;
         this.context = context;
     }
 
     @Override
-    public DataAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public HomeRecylerAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_layout, viewGroup, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(DataAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(HomeRecylerAdapter.ViewHolder viewHolder, int i) {
 
         viewHolder.tv_android.setText(android.get(i).getAndroid_version_name());
         Picasso.with(context).load(android.get(i).getAndroid_image_url()).resize(240, 120).into(viewHolder.img_android);

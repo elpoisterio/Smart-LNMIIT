@@ -9,7 +9,7 @@ import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 
 import io.elpoisterio.smartlnmiit.utilities.AndroidVersion;
-import io.elpoisterio.smartlnmiit.adapters.DataAdapter;
+import io.elpoisterio.smartlnmiit.adapters.HomeRecylerAdapter;
 import io.elpoisterio.smartlnmiit.R;
 
 public class Home extends AppCompatActivity {
@@ -60,7 +60,7 @@ public class Home extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         ArrayList<AndroidVersion> androidVersions = prepareData();
-        DataAdapter adapter = new DataAdapter(getApplicationContext(),androidVersions);
+        HomeRecylerAdapter adapter = new HomeRecylerAdapter(getApplicationContext(),androidVersions);
         recyclerView.setAdapter(adapter);
 
     }
