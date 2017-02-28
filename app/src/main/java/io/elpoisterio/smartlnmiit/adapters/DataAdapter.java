@@ -12,7 +12,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-import io.elpoisterio.smartlnmiit.AndroidVersion;
+import io.elpoisterio.smartlnmiit.utilities.AndroidVersion;
 import io.elpoisterio.smartlnmiit.R;
 
 /**

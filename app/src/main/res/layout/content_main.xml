@@ -7,8 +7,8 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="io.elpoisterio.smartlnmiit.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context="io.elpoisterio.smartlnmiit.activity.Home"
+    tools:showIn="@layout/activity_home">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/card_recycler_view"
