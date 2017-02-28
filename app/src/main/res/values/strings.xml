@@ -7,4 +7,5 @@
     <string name="faculty">FACULTY</string>
     <string name="student_alumni">STUDENT/ALUMNI</string>
     <string name="non_teaching_staff">NON- TEACHING STAFF</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
