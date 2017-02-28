@@ -46,10 +46,10 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         return android.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder{
         private TextView tv_android;
         private ImageView img_android;
-        public ViewHolder(View view) {
+        ViewHolder(View view) {
             super(view);
 
             tv_android = (TextView)view.findViewById(R.id.tv_android);
