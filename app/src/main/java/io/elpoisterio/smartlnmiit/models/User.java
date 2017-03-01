@@ -1,8 +1,65 @@
 package io.elpoisterio.smartlnmiit.models;
 
+import com.orm.SugarRecord;
+
 /**
  * Created by rishabh on 27/2/17.
  */
 
-public class User {
+public class User extends SugarRecord {
+
+    private String name;
+    private String email;
+    private String roll_number;
+    private String batch;
+    private String semester;
+    private String type;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getRoll_number() {
+        return roll_number;
+    }
+
+    public void setRoll_number(String roll_number) {
+        this.roll_number = roll_number;
+    }
+
+    public String getBatch() {
+        return batch;
+    }
+
+    public void setBatch(String batch) {
+        this.batch = batch;
+    }
+
+    public String getSemester() {
+        return semester;
+    }
+
+    public void setSemester(String semester) {
+        this.semester = semester;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }
