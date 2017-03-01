@@ -8,4 +8,7 @@
     <string name="student_alumni">STUDENT/ALUMNI</string>
     <string name="non_teaching_staff">NON- TEACHING STAFF</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_cancel_class">CancelClass</string>
+    <string name="title_activity_upload_grades">UploadGrades</string>
+    <string name="title_activity_application">Application</string>
 </resources>
