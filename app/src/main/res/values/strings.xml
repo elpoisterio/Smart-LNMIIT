@@ -9,4 +9,6 @@
     <string name="non_teaching_staff">NON- TEACHING STAFF</string>
     <string name="title_activity_main">Home</string>
     <string name="hint_name">Name</string>
+    <string name="hint_title">Mr. / Dr./ Prof.</string>
+    <string name="staff">STAFF</string>
 </resources>
