@@ -9,7 +9,7 @@ import android.view.View;
 
 import io.elpoisterio.smartlnmiit.R;
 
-public class Application extends AppCompatActivity {
+public class Applications extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

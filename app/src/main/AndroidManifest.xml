@@ -35,7 +35,7 @@
             android:label="@string/title_activity_upload_grades"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.Application"
+            android:name=".activity.Applications"
             android:label="@string/title_activity_application"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

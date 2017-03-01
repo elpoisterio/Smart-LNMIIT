@@ -1,6 +1,5 @@
 package io.elpoisterio.smartlnmiit.activity;
 
-import android.app.*;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
@@ -14,7 +13,6 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -88,7 +86,7 @@ public class Home extends AppCompatActivity {
                        startActivity(intent1);
                        break;
                    case 5:
-                       Intent intent2 = new Intent(Home.this , Application.class);
+                       Intent intent2 = new Intent(Home.this , Applications.class);
                        startActivity(intent2);
                        break;
 
@@ -107,7 +105,7 @@ public class Home extends AppCompatActivity {
             "MIS",
             "Class Cancellation",
             "Upload Grades",
-            "Application",
+            "Applications",
             "Jelly Bean",
             "KitKat",
             "ABC",
