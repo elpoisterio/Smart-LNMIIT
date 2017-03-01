@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cv1"
+        android:id="@+id/staff"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="1dp"
@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/faculty"
+            android:text="@string/staff"
             android:textSize="25sp"
             android:gravity="center"
             android:textColor="@color/white"
@@ -31,7 +31,7 @@
 
     </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
-        android:id="@+id/cv3"
+        android:id="@+id/student"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="1dp"
@@ -53,29 +53,7 @@
             />
 
     </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        android:id="@+id/cv2"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="1dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="10dp"
-        card_view:cardBackgroundColor="@color/some_pink"
-        card_view:cardCornerRadius="4dp"
-        card_view:cardPreventCornerOverlap="false"
-        card_view:contentPadding="8dp"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/non_teaching_staff"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:textColor="@color/white"
-            />
 
-    </android.support.v7.widget.CardView>
 
 
 </LinearLayout>
