@@ -38,7 +38,7 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<HomeRecylerAdapter.
     public void onBindViewHolder(HomeRecylerAdapter.ViewHolder viewHolder, int i) {
 
         viewHolder.tv_android.setText(android.get(i).getAndroid_version_name());
-        Picasso.with(context).load(android.get(i).getAndroid_image_url()).resize(240, 120).into(viewHolder.img_android);
+        Picasso.with(context).load(android.get(i).getAndroid_image_url()).resize(240, 240).into(viewHolder.img_android);
     }
 
     @Override

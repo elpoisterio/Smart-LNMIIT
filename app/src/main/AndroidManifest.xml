@@ -26,6 +26,18 @@
         <meta-data android:name="VERSION" android:value="1"/>
         <meta-data android:name="QUERY_LOG" android:value="true"/>
         <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="io.elpoisterio.smartlnmiit.models"/>
+        <activity
+            android:name=".activity.CancelClass"
+            android:label="@string/title_activity_cancel_class"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.UploadGrades"
+            android:label="@string/title_activity_upload_grades"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.Application"
+            android:label="@string/title_activity_application"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
