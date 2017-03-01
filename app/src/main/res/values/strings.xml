@@ -11,4 +11,8 @@
     <string name="hint_name">Name</string>
     <string name="hint_title">Mr. / Dr./ Prof.</string>
     <string name="staff">STAFF</string>
+    <string name="title_activity_cancel_class">CancelClass</string>
+    <string name="title_activity_upload_grades">UploadGrades</string>
+    <string name="title_activity_application">Application</string>
+
 </resources>
