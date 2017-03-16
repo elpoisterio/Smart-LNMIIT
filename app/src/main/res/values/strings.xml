@@ -1,14 +1,22 @@
 <resources>
     <string name="app_name">Smart LNMIIT</string>
-    <string name="hint_email">email</string>
+    <string name="hint_email">email@lnmiit.ac.in</string>
     <string name="hint_password">password</string>
     <string name="login">LOGIN</string>
     <string name="sign_up">SIGN UP</string>
     <string name="faculty">FACULTY</string>
     <string name="student_alumni">STUDENT/ALUMNI</string>
     <string name="non_teaching_staff">NON- TEACHING STAFF</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Home</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_title">Mr. / Dr./ Prof.</string>
+    <string name="staff">STAFF</string>
     <string name="title_activity_cancel_class">CancelClass</string>
     <string name="title_activity_upload_grades">UploadGrades</string>
     <string name="title_activity_application">Application</string>
+    <string name="send">SEND</string>
+    <string name="batch_eg_y13">Batch ( eg. Y13)</string>
+    <string name="course_name">Course Name</string>
+    <string name="upload_grades">UPLOAD GRADES</string>
+
 </resources>
