@@ -9,10 +9,12 @@ import android.support.customtabs.CustomTabsClient;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.customtabs.CustomTabsServiceConnection;
 import android.support.customtabs.CustomTabsSession;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -26,6 +28,7 @@ import io.elpoisterio.smartlnmiit.widgets.RecyclerItemClickListener;
 public class Home extends AppCompatActivity {
 
     RecyclerView recyclerView ;
+    BottomNavigationView bnv;
     final String CUSTOM_TAB_PACKAGE_NAME = "com.android.chrome";
     final String misURL = "http://172.22.2.26/MIS/default.aspx";
     final String placementUrl= "http://placements.lnmiit.ac.in/";
@@ -44,6 +47,9 @@ public class Home extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         initViews();
+
+        int a=bnv.getMaxItemCount();
+        Log.d("hey", String.valueOf(a));
 
         mCustomTabsServiceConnection = new CustomTabsServiceConnection() {
             @Override
@@ -129,6 +135,7 @@ public class Home extends AppCompatActivity {
 
 
     private void initViews(){
+        bnv= (BottomNavigationView)findViewById(R.id.bottom_navigation);
         recyclerView = (RecyclerView)findViewById(R.id.card_recycler_view);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),2);
