@@ -21,6 +21,7 @@ import io.elpoisterio.smartlnmiit.R;
 import io.elpoisterio.smartlnmiit.restClient.RestManager;
 import io.elpoisterio.smartlnmiit.utilities.CheckInternetConnection;
 import io.elpoisterio.smartlnmiit.utilities.HandlerConstant;
+import io.elpoisterio.smartlnmiit.utilities.HelperConstants;
 
 public class Login extends AppCompatActivity implements View.OnClickListener{
 
@@ -81,20 +82,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
     }
 
-    public static boolean isEmailValid(CharSequence email) {
-
-        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
-        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(email);
-        System.out.println(matcher);
-        return matcher.matches();
-    }
 
     @Override
     public void onClick(View v) {
         if (v == loginButton){
             checkEmptyFields();
-            if(!isEmailValid(email.getText().toString())){
+            if(!HelperConstants.isEmailValid(email.getText().toString())){
                 Toast.makeText(Login.this, "Please use email id provided by college", Toast.LENGTH_SHORT).show();
             } else {
                 if(!new CheckInternetConnection(Login.this).isConnectedToInternet()){
