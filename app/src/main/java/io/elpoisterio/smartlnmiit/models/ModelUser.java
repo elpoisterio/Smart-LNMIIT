@@ -14,6 +14,12 @@ public class User extends SugarRecord {
     private String batch;
     private String semester;
     private String type;
+    private String designation;
+    private String title;
+    private String status;
+    private String course;
+    private String firebaseKey;
+
 
     public String getName() {
         return name;
@@ -61,5 +67,45 @@ public class User extends SugarRecord {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getDesignation() {
+        return designation;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public String getFirebaseKey() {
+        return firebaseKey;
+    }
+
+    public void setFirebaseKey(String firebaseKey) {
+        this.firebaseKey = firebaseKey;
     }
 }
