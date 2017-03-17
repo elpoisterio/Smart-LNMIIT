@@ -27,16 +27,16 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.Home"
-            android:label="@string/title_activity_main"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
             android:name=".activity.CancelClass"
-            android:label="@string/title_activity_cancel_class"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.UploadGrades"
-            android:label="@string/title_activity_upload_grades"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.Applications"
