@@ -11,6 +11,7 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -29,11 +30,13 @@
         <item name="android:layout_marginRight">16dp</item>
         <item name="android:layout_marginBottom">3dp</item>
     </style>
+
     <style name="MyTextInputLayout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColorHint">@color/nero</item>
     </style>
+
     <style name="MyButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

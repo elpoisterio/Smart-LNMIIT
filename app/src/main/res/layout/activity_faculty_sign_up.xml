@@ -2,11 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+
+
+
+
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:id="@+id/android_material_design_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Designation"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColorHint="@color/nero"
+        app:met_floatingLabel="normal" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_title"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:textColorHint="@color/nero">
 
@@ -31,6 +47,7 @@
             android:hint="@string/hint_name"
             android:inputType="text" />
     </android.support.design.widget.TextInputLayout>
+
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_email"

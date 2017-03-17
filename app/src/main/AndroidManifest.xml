@@ -19,35 +19,47 @@
         </activity>
         <activity
             android:name=".activity.StaffSignUp"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Faculty Sign Up"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.StudentSignUp"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Student Sign Up"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.Home"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".activity.CancelClass"
-            android:label=""
+            android:label="Class Cancellation"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.UploadGrades"
-            android:label=""
+            android:label="Upload Grades"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.Applications"
             android:label="@string/title_activity_application"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"  />
 
         <!-- all activities above this line -->
-        <meta-data android:name="DATABASE" android:value="smart_lnmiit_db.db"/>
-        <meta-data android:name="VERSION" android:value="1"/>
-        <meta-data android:name="QUERY_LOG" android:value="true"/>
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="io.elpoisterio.smartlnmiit.models"/>
+        <meta-data
+            android:name="DATABASE"
+            android:value="smart_lnmiit_db.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="io.elpoisterio.smartlnmiit.models" />
+
+        <activity
+            android:name=".activity.ComplaintsAndFeedback"
+            android:label="@string/title_activity_complaints_and_feedback"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -18,7 +18,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     Button loginButton;
     EditText email;
     EditText password;
-    Button signUpButton;
+    Button signUpButtonFaculty, signUpButtonStudent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +28,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         email = (EditText) findViewById(R.id.input_email);
         password = (EditText) findViewById(R.id.input_password);
         loginButton = (Button)findViewById(R.id.login);
-        signUpButton = (Button) findViewById(R.id.sign_up);
+        signUpButtonFaculty = (Button) findViewById(R.id.sign_up_as_faculty);
+        signUpButtonStudent = (Button) findViewById(R.id.sign_up_as_student);
 
         loginButton.setOnClickListener(this);
-        signUpButton.setOnClickListener(this);
+        signUpButtonFaculty.setOnClickListener(this);
+        signUpButtonStudent.setOnClickListener(this);
     }
 
     private boolean checkEmptyFields(){
@@ -64,19 +66,23 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 Toast.makeText(Login.this, "Please use email id provided by college", Toast.LENGTH_SHORT).show();
             } else {
                 //callApi()
-                moveToHome();
+               // moveToHome();
+                Intent intent = new Intent(Login.this , Home.class);
+                startActivity(intent);
             }
 
-        } else if(v == signUpButton){
-            moveToSignUpScreen();
+        } else if(v == signUpButtonStudent){
+            Intent intent = new Intent(Login.this , StudentSignUp.class);
+            startActivity(intent);
+        }
+        else if(v==signUpButtonFaculty)
+        {
+            Intent intent = new Intent(Login.this , StaffSignUp.class);
+            startActivity(intent);
         }
     }
 
-    private void moveToSignUpScreen() {
-        Intent intent = new Intent(Login.this , Home.class);
-        startActivity(intent);
-        finish();
-    }
+
 
     private void moveToHome() {
         Intent intent = new Intent(Login.this , ChooseType.class);

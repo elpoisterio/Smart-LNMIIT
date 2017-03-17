@@ -95,6 +95,10 @@ public class Home extends AppCompatActivity {
                        Intent intent2 = new Intent(Home.this , Applications.class);
                        startActivity(intent2);
                        break;
+                   case 6:
+                       Intent intent3 = new Intent(Home.this , ComplaintsAndFeedback.class);
+                       startActivity(intent3);
+                       break;
 
                }
 
@@ -112,7 +116,7 @@ public class Home extends AppCompatActivity {
             "Class Cancellation",
             "Upload Grades",
             "Applications",
-            "Jelly Bean",
+            "Complaints and Feedback",
             "KitKat",
             "ABC",
             "DEF",
@@ -125,7 +129,7 @@ public class Home extends AppCompatActivity {
             R.drawable.no_class,
             R.drawable.grades,
             R.drawable.application,
-            R.drawable.profile_icon,
+            R.drawable.complaint_icon,
             R.drawable.profile_icon,
             R.drawable.profile_icon,
             R.drawable.profile_icon
