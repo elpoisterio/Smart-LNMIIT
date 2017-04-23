@@ -2,11 +2,13 @@ package io.elpoisterio.smartlnmiit.models;
 
 import com.orm.SugarRecord;
 
+import java.util.ArrayList;
+
 /**
  * Created by rishabh on 27/2/17.
  */
 
-public class User extends SugarRecord {
+public class ModelUser extends SugarRecord {
 
     private String name;
     private String email;
@@ -17,8 +19,9 @@ public class User extends SugarRecord {
     private String designation;
     private String title;
     private String status;
-    private String course;
+    private String branch;
     private String firebaseKey;
+    private ArrayList<String> courses;
 
 
     public String getName() {
@@ -94,11 +97,11 @@ public class User extends SugarRecord {
     }
 
     public String getCourse() {
-        return course;
+        return branch;
     }
 
     public void setCourse(String course) {
-        this.course = course;
+        this.branch = course;
     }
 
     public String getFirebaseKey() {
@@ -107,5 +110,13 @@ public class User extends SugarRecord {
 
     public void setFirebaseKey(String firebaseKey) {
         this.firebaseKey = firebaseKey;
+    }
+
+    public ArrayList<String> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(ArrayList<String> courses) {
+        this.courses = courses;
     }
 }
