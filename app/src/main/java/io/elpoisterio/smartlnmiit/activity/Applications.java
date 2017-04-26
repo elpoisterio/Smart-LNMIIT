@@ -28,10 +28,12 @@ public class Applications extends AppCompatActivity {
     sendForApproval = (Button) findViewById(R.id.send_approval);
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, SPINNERLIST);
+                android.R.layout.simple_spinner_dropdown_item, SPINNERLIST);
         MaterialBetterSpinner materialDesignSpinner = (MaterialBetterSpinner)
                 findViewById(R.id.android_material_design_spinner);
         materialDesignSpinner.setAdapter(arrayAdapter);
+
+
         sendForApproval.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,12 +43,7 @@ public class Applications extends AppCompatActivity {
                         .itemsCallbackMultiChoice(null, new MaterialDialog.ListCallbackMultiChoice() {
                             @Override
                             public boolean onSelection(MaterialDialog dialog, Integer[] which, CharSequence[] text) {
-                               /* *//**//**
-                                 * If you use alwaysCallMultiChoiceCallback(), which is discussed below,
-                                 * returning false here won't allow the newly selected check box to actually be selected
-                                 * (or the newly unselected check box to be unchecked).
-                                 * See the limited multi choice dialog example in the sample project for details.
-                                 **//**//**/
+
                                 return true;
                             }
                         })

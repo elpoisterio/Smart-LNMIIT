@@ -12,30 +12,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="G:\Smart-LNMIIT\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\lenovo\.android\build-cache\2d89c2c3d37543aca075820c3788a670f43c5e7d\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_efe368a964d734ea150d303e92129af3edc4b225\classes.dex" />
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_82cd7badf861f760544c890d1f27ec955a6fa537\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\a61b57d713b299f9448145c1e5d7b951b3d9ea1c\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\library-2.4.0_d1d2405b41fac7202b0c13e704d4336128b69953.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.android\build-cache\018e8b6cd40ab745add9dd9e4c3186aa5882284a\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="30a4938ea5235ccf532b3e9f04200e68547e36ad">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_3b5699e3c6524f82e86c17c414528191749106d4.jar" />
+        sha1="e699699fae0092703de1d02b217f43803d0f7e0a">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3e81b4c3c33471628339f947b1b9187835d6633c\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -45,6 +36,15 @@
         revision="25.0.2"
         sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
         <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\httpclient-4.3.6_02fd43817091ef7267cf5b650a783833bcdc3bb4.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_283b98a2f80d9b1e1b6a84a5c5721ac5c08af401\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -57,12 +57,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="G:\Smart-LNMIIT\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\lenovo\.android\build-cache\32cc38f316983cefa0ccba8ba1897c4a9cd98af0\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="3cc993ccd3dd4e7ca4ccedf2435e87f668e1fd1e">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_1f6a73de738bfb6bcec719cde77cad528a6777cb\classes.dex" />
+        sha1="98684c2dd540ae9d80457028a4fce156e8f9b7d3">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a8687a16742e73f1ab38166c710bd455cd4fb4d7\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -92,31 +92,13 @@
         <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_8bdfbaf7a6746f6985399b5624b998c0cfb857e0.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.android\build-cache\0fd156eaaaf25b600254a7c22e4e7e129500440c\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\39798e3b7fea00d645f57bc5f5756ae0a9db28b9\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_59356c69ac623a1b9a92eb55d414594de22c8c1c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.android\build-cache\a73d2eaf4415f876548474c37c3f9de6fbaf3669\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ac045b53684345f4ec8468477e8fc5034d0d2bfd">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_9a20c5ea2cbf2803c123aa26d566b62a7fd7ddff.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.android\build-cache\39701bdf52f9ee1ea125c4817a980fb55246cfb7\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8d8c5463a1a50691e2cf66cd7ce4751c8545b584">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_eb739fb7932822ba87ed917b34e3394eac95ea22.jar" />
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6f65423161713cb2dbf75a19d1dfeed200420644\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -128,31 +110,13 @@
         <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_3355b51c00ad4f6555172ad6d3861b7343e6fedd.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\f3a9081ddb78cf4f23028cd116e40ed36868d177\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\support-annotations-25.2.0_706cdf2d34d12519c77a185b9abf7a71728840a1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.android\build-cache\eeb3b7cbbf23f370c07c40af5b3f5b6f3315e883\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="052802ed198178e7133de387fbc87d3f2998482a">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_dab3259ae8c9801d75e1fc0887330a415ecedc88.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.android\build-cache\4eabeba7a95467bc29b3a86594c75f098178b105\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_4f3a533426637f090aa33321f837da9b9c2c8dd6.jar" />
+        sha1="5a5cbc42192d2afde319e4babe59bf8e41a49d35">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0abbe84b5151b81527bda73bfb233826f557bb64\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -162,15 +126,6 @@
         revision="25.0.2"
         sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
         <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_4bc16344d674d7a7728c2087d54a8de738e3a296.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\guava\guava\18.0\guava-18.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cce0823396aa693798f8882e64213b1772032b09">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\guava-18.0_23ae9d619c9ad952ac11ce7bff78df802e3e98c2.jar" />
     </item>
     <item
         is-multidex="false"
@@ -209,13 +164,13 @@
         <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_eda99b5605c77cfdf2badd5b3df698c2c2794b37.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.android\build-cache\e4f702caa41ad3a7cd174b6ed9366206a5f6dea5\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\b35701a64cad57ec4d42702a20e097c1cf378bce\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a846ddbf5bf88dee5f89d4dffe22c864f576d9b0">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_45ee0aedcec57cf807af91d874da21590ddfd20a.jar" />
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e31ce5debb6c869df5c3a9b887462da867ce7162\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -227,13 +182,13 @@
         <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_901538202b1d7b84d4c7834ab68360c287891429.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.android\build-cache\ed7581c220834e540620596303205efdf96be0fa\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\61fe26a955f65001be3d4e32da66e3c330acc940\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e51c2f662bb72419632af5192553c37e33890a99">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_dc315acab1b5419ca67685631194362c2aebb8e2.jar" />
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7c6f41408d9f1a07e83de08a75c9c3f2ccf8cec1\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -243,6 +198,240 @@
         revision="25.0.2"
         sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
         <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_4acd9e9a9d8788892fb35211de754db37c3a793c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\0c66ab540a3cecfe753c61752ca0626ae79a65f2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9715585867480e9916e0ce284ac52697678afe4c">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a1ab7c4b0b09c9483f42836a62bd5a6922b0384c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\bcddd6b1db481a768fe78744fb49c6cf18502d31\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="adb0c8575a8fcdd3628db9380b33b5df11fcd70c">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8a83d14eeb95fa30c8a471d86e85e52a092b5344\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\5fa60b52483e04932977d5a99caa500eb7f8f213\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6c23da90f35b98d375ec34f6f8f2ccefc064aaac\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-beta4\constraint-layout-solver-1.0.0-beta4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a9cb567dc008f570c28531720168f19148da965">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.0-beta4_52294726bfdb534582c5c9e8c66398d161721e37.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\749a42e703ab35a4c383abb97f94f6bba8fe92ea\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_acfe5b5cc8388af20c34eac5eaa0585e292638c9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_efe368a964d734ea150d303e92129af3edc4b225\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\library-2.4.0_d1d2405b41fac7202b0c13e704d4336128b69953.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.android\build-cache\018e8b6cd40ab745add9dd9e4c3186aa5882284a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="30a4938ea5235ccf532b3e9f04200e68547e36ad">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_3b5699e3c6524f82e86c17c414528191749106d4.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5b0007fec5ca5227bf1eb071cd5ef8712b056a07">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_1f6a73de738bfb6bcec719cde77cad528a6777cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.android\build-cache\0fd156eaaaf25b600254a7c22e4e7e129500440c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_59356c69ac623a1b9a92eb55d414594de22c8c1c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.android\build-cache\a73d2eaf4415f876548474c37c3f9de6fbaf3669\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ac045b53684345f4ec8468477e8fc5034d0d2bfd">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_9a20c5ea2cbf2803c123aa26d566b62a7fd7ddff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.android\build-cache\39701bdf52f9ee1ea125c4817a980fb55246cfb7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8d8c5463a1a50691e2cf66cd7ce4751c8545b584">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_eb739fb7932822ba87ed917b34e3394eac95ea22.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\eb39f1486eb365d8d9c4adabaa2885dda7590939\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8531f2d46b35de75e6130f25830e0c2c0d6bb98c">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c8f4088b313cb4ac93cd26d65ae0b13c1bafab56\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\support-annotations-25.2.0_706cdf2d34d12519c77a185b9abf7a71728840a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.android\build-cache\eeb3b7cbbf23f370c07c40af5b3f5b6f3315e883\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052802ed198178e7133de387fbc87d3f2998482a">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_dab3259ae8c9801d75e1fc0887330a415ecedc88.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\e6549adb4860b0ea4da2e8b7a9db6a84d2c1ff84\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1fdd76859c12084d666079f6e495da4fb4400637\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\63059179404aad182e84b34f5325fb072e68bf21\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3ca61e18be7b34ff948774d0340c06fbba513160\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.android\build-cache\4eabeba7a95467bc29b3a86594c75f098178b105\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_4f3a533426637f090aa33321f837da9b9c2c8dd6.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\d56271643b5366df23405b49ba730b94b8d81385\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e5f51f7248e4d70967a104eea90601312add5097\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\guava\guava\18.0\guava-18.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\guava-18.0_23ae9d619c9ad952ac11ce7bff78df802e3e98c2.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\8d113a284dc5a72d0ba1bc2e987d8d3dc6fcdb39\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9a376681dc045542d5151efbede8eff02d817b0b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\ecf813798ccb6087ca52a14523e211185293441b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dd4841a6161cb7fee0382e726770137b489a01f5\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.android\build-cache\e4f702caa41ad3a7cd174b6ed9366206a5f6dea5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a846ddbf5bf88dee5f89d4dffe22c864f576d9b0">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_45ee0aedcec57cf807af91d874da21590ddfd20a.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\fc335adbd2d2b5e11bbb69c036fd732369b0728a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="30a4938ea5235ccf532b3e9f04200e68547e36ad">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_05fd758b81e4c9703010ab98ba14c5aaa4567a14\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\66aeab0a1b096831ec201965fca0dc240f17e1ca\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d8e70cc4e2398b5ce519cfd1e19e6e924936f698\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.android\build-cache\ed7581c220834e540620596303205efdf96be0fa\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\classes_dc315acab1b5419ca67685631194362c2aebb8e2.jar" />
     </item>
     <item
         is-multidex="false"
@@ -272,13 +461,13 @@
         <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_08ed79868f1ec893b338f1d2abe1328ebd861fbf.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-beta4\constraint-layout-solver-1.0.0-beta4.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\f5c1246fa64b4fdf836659efbcb177a89992ddbf\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="0a9cb567dc008f570c28531720168f19148da965">
-        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.0-beta4_52294726bfdb534582c5c9e8c66398d161721e37.jar" />
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f6295c08410382935815ebe1741f2725f1b29dde\classes.dex" />
     </item>
 
 </items>

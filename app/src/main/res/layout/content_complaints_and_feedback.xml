@@ -8,39 +8,62 @@
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@drawable/gradient_bg"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="io.elpoisterio.smartlnmiit.activity.ComplaintsAndFeedback"
     tools:showIn="@layout/activity_complaints_and_feedback">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complaints and Feedback"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
     <RadioGroup
         android:layout_width="368dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginTop="48dp"
+        style="@style/RadioButtonStyle"
         android:orientation="vertical"
        >
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:textColor="#ffffff"
+            style="@style/RadioButtonStyle"
             android:text="Mess Complaint"/>
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
+            android:textColor="#ffffff"
+            style="@style/RadioButtonStyle"
+            android:paddingLeft="16dp"
             android:text="Hostel Complaint"/>
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
+            style="@style/RadioButtonStyle"
+            android:paddingLeft="16dp"
+            android:textColor="#ffffff"
             android:text="Canteen Complaint"/>
     </RadioGroup>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_description"
+        app:hintEnabled="false"
+        android:textColor="#ffffff"
+        style="@style/MyTextInputLayout"
         android:layout_width="match_parent"
         android:layout_marginTop="16dp"
         android:layout_height="wrap_content"
@@ -48,11 +71,18 @@
 
         <EditText
             android:id="@+id/input_description"
-            style="@style/MyEditText"
             android:layout_centerHorizontal="true"
             android:focusable="true"
             android:gravity="top|left"
-
+            style="@style/MyEditText1"
+            android:drawableLeft="@mipmap/ic_book_white_24dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="12dp"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:background="@drawable/edittext_border"
             android:hint="Description"
             android:inputType="textMultiLine"
 
@@ -65,8 +95,6 @@
         android:id="@+id/send"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/button_selector"
         android:elevation="8dp"

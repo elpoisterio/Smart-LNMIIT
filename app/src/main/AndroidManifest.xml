@@ -10,7 +10,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.Login">
+        <activity
+            android:name=".activity.Login"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,14 +22,14 @@
         <activity
             android:name=".activity.StaffSignUp"
             android:label="Faculty Sign Up"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.StudentSignUp"
             android:label="Student Sign Up"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.Home"
-            android:label=""
+            android:label="Home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.CancelClass"
@@ -36,13 +38,11 @@
         <activity
             android:name=".activity.UploadGrades"
             android:label="Upload Grades"
-            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".activity.Applications"
             android:label="@string/title_activity_application"
-            android:theme="@style/AppTheme.NoActionBar"  />
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- all activities above this line -->
         <meta-data
@@ -61,6 +61,18 @@
         <activity
             android:name=".activity.ComplaintsAndFeedback"
             android:label="@string/title_activity_complaints_and_feedback"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.Profile"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.Feeds"
+            android:label="@string/title_activity_feeds"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.Notifications"
+            android:label="@string/title_activity_notifications"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

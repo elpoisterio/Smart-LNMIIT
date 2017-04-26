@@ -31,10 +31,25 @@
         <item name="android:layout_marginBottom">3dp</item>
     </style>
 
+
+    <style name="MyEditText1">
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/nero</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+
     <style name="MyTextInputLayout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColorHint">@color/nero</item>
+        <item name="android:textColorHint">#ffffff</item>
+
     </style>
 
     <style name="MyButton">
@@ -50,4 +65,9 @@
         <item name="android:layout_marginRight">16dp</item>
     </style>
 
+
+    <style name="RadioButtonStyle" parent="AppTheme">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
 </resources>

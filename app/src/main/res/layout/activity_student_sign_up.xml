@@ -3,35 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white_other"
+    android:background="@drawable/gradient_bg"
     android:orientation="vertical">
 
-
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Student Sign Up"
+    android:textColor="#ffffff"
+    android:textSize="24dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="40dp"/>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_name"
         android:layout_width="match_parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="60dp"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/nero">
+        app:hintEnabled="false"
+        android:textColor="#ffffff"
+        style="@style/MyTextInputLayout">
 
         <EditText
             android:id="@+id/input_name"
             style="@style/MyEditText"
             android:fontFamily="sans-serif-condensed"
             android:hint="@string/hint_name"
+            android:drawableLeft="@mipmap/ic_face_white_24dp"
+            android:drawablePadding="12dp"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:background="@drawable/edittext_border"
             android:inputType="text" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/nero">
+        app:hintEnabled="false"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/input_email"
             style="@style/MyEditText"
+            android:fontFamily="sans-serif-condensed"
+            android:drawableLeft="@mipmap/ic_email_white_24dp"
+            android:drawablePadding="12dp"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:background="@drawable/edittext_border"
             android:hint="@string/hint_email"
             android:inputType="textEmailAddress" />
     </android.support.design.widget.TextInputLayout>
@@ -39,25 +61,41 @@
     <android.support.design.widget.TextInputLayout
     android:id="@+id/input_layout_password"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textColorHint="@color/nero">
+        app:hintEnabled="false"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/input_password"
-        style="@style/MyEditText"
-        android:hint="@string/hint_password"
-        android:inputType="textPassword" />
-</android.support.design.widget.TextInputLayout>
+        <EditText
+            android:id="@+id/input_password"
+            style="@style/MyEditText"
+            android:background="@drawable/edittext_border"
+            android:drawableLeft="@mipmap/ic_enhanced_encryption_white_24dp"
+            android:drawablePadding="12dp"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+    </android.support.design.widget.TextInputLayout>
 
     <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:id="@+id/android_material_design_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Branch"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:textColorHint="#000000"
-        app:met_floatingLabel="normal" />
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittext_border"
+        android:drawableLeft="@mipmap/ic_local_library_white_24dp"
+        android:drawablePadding="12dp"
+        android:hint="Branch"
+        android:textColorHint="#ffffff"
+        app:met_baseColor="#ffffff"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="#ffffff"
+        app:met_textColorHint="#ffffff"
+        app:met_underlineColor="#ffffff" />
+
 
     <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:id="@+id/android_material_design_spinner1"
@@ -66,11 +104,20 @@
         android:hint="Course"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:textColorHint="#000000"
-        app:met_floatingLabel="normal" />
+        app:met_textColorHint="#ffffff"
+        app:met_primaryColor="#ffffff"
+        app:met_underlineColor="#ffffff"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@mipmap/ic_school_white_24dp"
+        android:textColorHint="#ffffff"
+        app:met_floatingLabel="highlight"
+        app:met_baseColor="#ffffff"
+        />
+
+
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/signup_student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -87,4 +134,14 @@
         android:textColor="@color/white_text"
         android:textSize="@dimen/font_size_14sp" />
 
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AVLoadingIndicatorView"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        app:indicatorName="BallPulseIndicator"
+        app:indicatorColor="#ffffff"
+        />
 </LinearLayout>

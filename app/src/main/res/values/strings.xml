@@ -38,6 +38,9 @@
         <item>HOD MME</item>
     </string-array>
     <string name="title_activity_complaints_and_feedback">ComplaintsAndFeedback</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_feeds">Feeds</string>
+    <string name="title_activity_notifications">Notifications</string>
 
 
 </resources>

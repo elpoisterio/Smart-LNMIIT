@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_application"
+        android:id="@+id/action_feeds"
         android:enabled="true"
         android:icon="@mipmap/ic_contact_mail_black_24dp"
         android:title="Feeds"
@@ -20,5 +20,12 @@
         android:enabled="true"
         android:icon="@mipmap/ic_priority_high_white_24dp"
         android:title="Notifications"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_group"
+        android:enabled="true"
+        android:icon="@mipmap/ic_group_white_24dp"
+        android:title="Groups"
         app:showAsAction="ifRoom" />
 </menu>

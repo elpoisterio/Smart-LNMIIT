@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.customtabs.CustomTabsClient;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.customtabs.CustomTabsServiceConnection;
@@ -14,6 +15,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -63,6 +65,33 @@ public class Home extends AppCompatActivity {
             }
         };
 
+        bnv.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.action_feeds:
+                                Intent intent1 = new Intent(Home.this , Feeds.class);
+                                startActivity(intent1);
+                                break;
+                            case R.id.action_profile:
+                                   Intent intent = new Intent(Home.this , Profile.class);
+                                startActivity(intent);
+                                break;
+                            case R.id.action_notification:
+                                Intent intent2 = new Intent(Home.this , Notifications.class);
+                                startActivity(intent2);
+                                break;
+
+                            case R.id.action_group:
+                                /*Intent intent3 = new Intent(Home.this , .class);
+                                startActivity(intent2);*/
+                                break;
+                        }
+                        return true;
+                    }
+                });
+
         CustomTabsClient.bindCustomTabsService(this, CUSTOM_TAB_PACKAGE_NAME, mCustomTabsServiceConnection);
 
         mCustomTabsIntent = new CustomTabsIntent.Builder(mCustomTabsSession)
@@ -100,6 +129,7 @@ public class Home extends AppCompatActivity {
                        startActivity(intent3);
                        break;
 
+
                }
 
 
@@ -117,9 +147,6 @@ public class Home extends AppCompatActivity {
             "Upload Grades",
             "Applications",
             "Complaints and Feedback",
-            "KitKat",
-            "ABC",
-            "DEF",
     };
 
     private final int android_image_urls[] = {
@@ -130,9 +157,6 @@ public class Home extends AppCompatActivity {
             R.drawable.grades,
             R.drawable.application,
             R.drawable.complaint_icon,
-            R.drawable.profile_icon,
-            R.drawable.profile_icon,
-            R.drawable.profile_icon
     };
 
 
