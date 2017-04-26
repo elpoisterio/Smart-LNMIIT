@@ -28,7 +28,7 @@ public class UploadGrades extends AppCompatActivity implements View.OnClickListe
         uploadGrades = (Button) findViewById(R.id.upload_grades);
         send = (Button) findViewById(R.id.send);
         courseName = (EditText) findViewById(R.id.course_name);
-        batch = (EditText) findViewById(R.id.batch);
+
 
 
     }

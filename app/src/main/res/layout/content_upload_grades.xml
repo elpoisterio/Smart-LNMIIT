@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_upload_grades"
@@ -8,47 +8,58 @@
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:background="@drawable/gradient_bg"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="io.elpoisterio.smartlnmiit.activity.UploadGrades"
     tools:showIn="@layout/activity_upload_grades">
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Upload Grades"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_courseName"
         android:layout_width="match_parent"
+        app:hintEnabled="false"
+        android:textColor="#ffffff"
+        android:layout_marginTop="48dp"
+        style="@style/MyTextInputLayout"
         android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/course_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            style="@style/MyEditText1"
+            android:drawableLeft="@mipmap/ic_book_white_24dp"
+            android:fontFamily="sans-serif-condensed"
+            android:drawablePadding="12dp"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:background="@drawable/edittext_border"
+            android:inputType="text"
             android:hint="@string/course_name" />
 
     </android.support.design.widget.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/input_batch"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/input_courseName"
-        android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/batch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:hint="@string/batch_eg_y13" />
-
-    </android.support.design.widget.TextInputLayout>
     <Button
         android:id="@+id/upload_grades"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/input_batch"
-        style="@style/MyButton"
+        android:layout_marginTop="24dp"
         android:background="@color/grey"
+        android:textColor="#ffffff"
         android:text="@string/upload_grades"
 
         />
@@ -70,4 +81,4 @@
         android:textColor="@color/white_text"
         android:textSize="@dimen/font_size_14sp" />
 
-</RelativeLayout>
+</LinearLayout>

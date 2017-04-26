@@ -7,9 +7,6 @@
     android:fitsSystemWindows="true"
     tools:context="io.elpoisterio.smartlnmiit.activity.Applications">
 
-    <include layout="@layout/toolbar"/>
-
     <include layout="@layout/content_application" />
-
 
 </android.support.design.widget.CoordinatorLayout>

@@ -2,7 +2,10 @@
     <string name="app_name">Smart LNMIIT</string>
     <string name="hint_email">email@lnmiit.ac.in</string>
     <string name="hint_password">password</string>
+    <string name="hint_branch">branch</string>
     <string name="login">LOGIN</string>
+    <string name="sign_up_as_student">SIGN UP AS STUDENT</string>
+    <string name="sign_up_as_faculty">SIGN UP AS FACULTY</string>
     <string name="sign_up">SIGN UP</string>
     <string name="faculty">FACULTY</string>
     <string name="student_alumni">STUDENT/ALUMNI</string>
@@ -18,5 +21,26 @@
     <string name="batch_eg_y13">Batch ( eg. Y13)</string>
     <string name="course_name">Course Name</string>
     <string name="upload_grades">UPLOAD GRADES</string>
+    <string name="title">Send to :</string>
+    <string name="choose">SEND</string>
+    <string name="negative">CANCEL</string>
+
+    <string-array name="designations">
+        <item>Dean of Student Affairs</item>
+        <item>Dean of Faculty Affairs</item>
+        <item>Dean of Academics</item>
+        <item>Chief Warden</item>
+        <item>Mess Warden</item>
+        <item>HOD ECE</item>
+        <item>HOD CSE</item>
+        <item>HOD Physics</item>
+        <item>HOD Maths</item>
+        <item>HOD MME</item>
+    </string-array>
+    <string name="title_activity_complaints_and_feedback">ComplaintsAndFeedback</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_feeds">Feeds</string>
+    <string name="title_activity_notifications">Notifications</string>
+
 
 </resources>

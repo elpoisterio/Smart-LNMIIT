@@ -1,16 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_application"
+    android:id="@+id/content_cancel_class"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@drawable/gradient_bg"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="io.elpoisterio.smartlnmiit.activity.Applications"
     tools:showIn="@layout/activity_application">
 
-</RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Application"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:id="@+id/android_material_design_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/edittext_border"
+        android:drawableLeft="@mipmap/ic_feedback_white_24dp"
+        android:drawablePadding="12dp"
+        android:hint="Type of Complaint"
+        android:textColorHint="#ffffff"
+        app:met_baseColor="#ffffff"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="#ffffff"
+        app:met_textColorHint="#ffffff"
+        app:met_underlineColor="#ffffff" />
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_description"
+        android:layout_width="match_parent"
+        app:hintEnabled="false"
+        android:textColor="#ffffff"
+        android:layout_marginTop="16dp"
+        style="@style/MyTextInputLayout"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/nero">
+
+        <EditText
+            android:id="@+id/input_description"
+            android:layout_centerHorizontal="true"
+            android:focusable="true"
+            android:gravity="top|left"
+            style="@style/MyEditText1"
+
+            android:drawableLeft="@mipmap/ic_book_white_24dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="12dp"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:background="@drawable/edittext_border"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/send_approval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_selector"
+        android:elevation="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:shadowRadius="18"
+        android:text="SEND FOR APPROVAL"
+        android:textColor="@color/white_text"
+        android:textSize="@dimen/font_size_14sp" />
+
+
+</LinearLayout>

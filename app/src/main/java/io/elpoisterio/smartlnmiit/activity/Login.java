@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -28,6 +30,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     Button loginButton;
     EditText email;
     EditText password;
+
+    Button signUpButtonFaculty, signUpButtonStudent;
     Button signUpButton;
     static Handler handler = new Handler();
     ProgressDialog dialog;
@@ -36,21 +40,26 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
         initView();
         updateUi();
 
-
-
     }
     private void initView(){
+
         email = (EditText) findViewById(R.id.input_email);
         password = (EditText) findViewById(R.id.input_password);
         loginButton = (Button)findViewById(R.id.login);
-        signUpButton = (Button) findViewById(R.id.sign_up);
+        signUpButtonFaculty = (Button) findViewById(R.id.sign_up_as_faculty);
+        signUpButtonStudent = (Button) findViewById(R.id.sign_up_as_student);
 
         loginButton.setOnClickListener(this);
-        signUpButton.setOnClickListener(this);
+        signUpButtonFaculty.setOnClickListener(this);
+        signUpButtonStudent.setOnClickListener(this);
     }
     private void updateUi(){
 
@@ -90,6 +99,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             if(!HelperConstants.isEmailValid(email.getText().toString())){
                 Toast.makeText(Login.this, "Please use email id provided by college", Toast.LENGTH_SHORT).show();
             } else {
+                //callApi()
+               // moveToHome();
+                Intent intent = new Intent(Login.this , Home.class);
+                startActivity(intent);
+
                 if(!new CheckInternetConnection(Login.this).isConnectedToInternet()){
                     Toast.makeText(context,"No internet connection",Toast.LENGTH_SHORT).show();
                 }else {
@@ -98,8 +112,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
             }
 
-        } else if(v == signUpButton){
-            moveToSignUpScreen();
+        } else if(v == signUpButtonStudent){
+            Intent intent = new Intent(Login.this , StudentSignUp.class);
+            startActivity(intent);
+        }
+        else if(v==signUpButtonFaculty)
+        {
+            Intent intent = new Intent(Login.this , StaffSignUp.class);
+            startActivity(intent);
         }
     }
 
@@ -127,6 +147,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         startActivity(intent);
         finish();
     }
+
 
     private void moveToHome() {
         Intent intent = new Intent(Login.this , ChooseType.class);
