@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "451761603731",
+    "firebase_url": "https://smart-lnmiit.firebaseio.com",
+    "project_id": "smart-lnmiit",
+    "storage_bucket": "smart-lnmiit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451761603731:android:51dc9774ab399ca1",
+        "android_client_info": {
+          "package_name": "io.elpoisterio.smartlnmiit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451761603731-u28erc3hl3sg09mtmnb75cjismitncu6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe5DsWpqVHugoJscloEuODeExwtTUxtwE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
