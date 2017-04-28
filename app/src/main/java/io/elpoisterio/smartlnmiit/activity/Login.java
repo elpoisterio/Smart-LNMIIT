@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -25,14 +34,16 @@ import io.elpoisterio.smartlnmiit.utilities.CheckInternetConnection;
 import io.elpoisterio.smartlnmiit.utilities.HandlerConstant;
 import io.elpoisterio.smartlnmiit.utilities.HelperConstants;
 
-public class Login extends AppCompatActivity implements View.OnClickListener{
+public class Login extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener{
 
     Button loginButton;
     EditText email;
     EditText password;
-
+    SignInButton googleSignInButton;
+    int RC_SIGN_IN = 1;
+    GoogleApiClient googleApiClient;
     Button signUpButtonFaculty, signUpButtonStudent;
-    Button signUpButton;
+
     static Handler handler = new Handler();
     ProgressDialog dialog;
     private Context context = Login.this;
@@ -56,10 +67,21 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         loginButton = (Button)findViewById(R.id.login);
         signUpButtonFaculty = (Button) findViewById(R.id.sign_up_as_faculty);
         signUpButtonStudent = (Button) findViewById(R.id.sign_up_as_student);
+        googleSignInButton = (SignInButton) findViewById(R.id.btn_sign_in_google);
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        googleApiClient = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this, this)
+                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                .build();
 
         loginButton.setOnClickListener(this);
         signUpButtonFaculty.setOnClickListener(this);
         signUpButtonStudent.setOnClickListener(this);
+        googleSignInButton.setOnClickListener(this);
     }
     private void updateUi(){
 
@@ -121,6 +143,42 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             Intent intent = new Intent(Login.this , StaffSignUp.class);
             startActivity(intent);
         }
+        else if( v == googleSignInButton){
+            callGoogleAuth();
+        }
+    }
+    private void callGoogleAuth (){
+        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == RC_SIGN_IN) {
+            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            handleSignInResult(result);
+        }
+
+    }
+
+    private void handleSignInResult ( GoogleSignInResult result){
+        if (result.isSuccess()) {
+            // Signed in successfully, show authenticated UI.
+            GoogleSignInAccount acct = result.getSignInAccount();
+            assert acct != null;
+            String name = acct.getDisplayName();
+            String email = acct.getEmail();
+            String googleIdToken = acct.getIdToken();
+
+        } else {
+            // Signed out, show unauthenticated UI.
+           Toast.makeText(this,"Login failed", Toast.LENGTH_SHORT).show();
+        }
+
+
     }
 
     private void callApi() {
@@ -150,7 +208,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
 
     private void moveToHome() {
-        Intent intent = new Intent(Login.this , ChooseType.class);
+        Intent intent = new Intent(Login.this , Home.class);
         startActivity(intent);
         finish();
     }
@@ -171,5 +229,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onPause() {
         super.onPause();
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
     }
 }

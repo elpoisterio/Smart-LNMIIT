@@ -21,6 +21,7 @@ public class ModelUser extends SugarRecord {
     private String status;
     private String branch;
     private String firebaseKey;
+    private String googleIdToken;
     private ArrayList<String> courses;
 
 
@@ -118,5 +119,13 @@ public class ModelUser extends SugarRecord {
 
     public void setCourses(ArrayList<String> courses) {
         this.courses = courses;
+    }
+
+    public String getGoogleIdToken() {
+        return googleIdToken;
+    }
+
+    public void setGoogleIdToken(String googleIdToken) {
+        this.googleIdToken = googleIdToken;
     }
 }
