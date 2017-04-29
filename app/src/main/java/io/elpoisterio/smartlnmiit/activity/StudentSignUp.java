@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -36,6 +37,7 @@ import android.widget.Toast;
 
 import com.loopj.android.http.RequestParams;
 
+import io.elpoisterio.smartlnmiit.models.ModelUser;
 import io.elpoisterio.smartlnmiit.restClient.RestManager;
 import io.elpoisterio.smartlnmiit.utilities.CheckInternetConnection;
 import io.elpoisterio.smartlnmiit.utilities.HandlerConstant;
@@ -52,14 +54,17 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
     Context context = StudentSignUp.this;
     ProgressDialog dialog;
     EditText email;
+    EditText name;
     EditText password;
-    EditText batch;
-    EditText course;
+    String branch;
+    String course;
     Button signUp;
     String[] branchList = {"CSE", "ECE" , "CCE" , "MME" , "Physics" , "Maths"};
     String[] courseList = {"B.Tech", "M.Tech" , "PhD" , "MSc"};
     Button signupStudent;
     AVLoadingIndicatorView avi;
+    MaterialBetterSpinner materialDesignSpinnerBranch;
+    MaterialBetterSpinner materialDesignSpinnerCourse;
 
 
     @Override
@@ -70,7 +75,7 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_student_sign_up);
 
-        signupStudent = (Button)findViewById(R.id.signup_student);
+
         avi = (AVLoadingIndicatorView) findViewById(R.id.avi);
         signupStudent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,21 +105,55 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
             }
         });
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
+
+
+    }
+
+    private void initView(){
+        name = (EditText) findViewById(R.id.input_name);
+        email = (EditText) findViewById(R.id.input_email);
+        password = (EditText) findViewById(R.id.input_password);
+        signupStudent = (Button)findViewById(R.id.signup_student);
+        signupStudent.setOnClickListener(this);
+
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_dropdown_item, branchList);
-        MaterialBetterSpinner materialDesignSpinner = (MaterialBetterSpinner)
+        materialDesignSpinnerBranch = (MaterialBetterSpinner)
                 findViewById(R.id.android_material_design_spinner);
-        materialDesignSpinner.setAdapter(arrayAdapter);
+        materialDesignSpinnerBranch.setAdapter(arrayAdapter);
+
+        materialDesignSpinnerBranch.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                branch = arrayAdapter.getItem(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
 
         ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_dropdown_item, courseList);
 
-        MaterialBetterSpinner materialDesignSpinner1 = (MaterialBetterSpinner)
+        materialDesignSpinnerCourse = (MaterialBetterSpinner)
                 findViewById(R.id.android_material_design_spinner1);
-        materialDesignSpinner1.setAdapter(arrayAdapter1);
+        materialDesignSpinnerCourse.setAdapter(arrayAdapter1);
 
+        materialDesignSpinnerCourse.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                course = arrayAdapter.getItem(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     void startAnim(){
@@ -136,14 +175,26 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
+                hideDialog(dialog);
                 if (msg.what == HandlerConstant.FAILURE) {
                     Toast.makeText(context, "Could not log in", Toast.LENGTH_SHORT).show();
                 } else {
+                    saveToDB();
                     moveToHome();
                 }
-                hideDialog(dialog);
+
             }
         };
+    }
+
+    private void saveToDB (){
+        ModelUser modelUser = new ModelUser();
+        modelUser.setEmail(email.getText().toString());
+        modelUser.setType("student");
+        modelUser.setBranch(branch);
+        modelUser.setCourse(course);
+        modelUser.save();
+
     }
 
     private void callApi() {
@@ -151,9 +202,10 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
         final RequestParams params = new RequestParams();
         params.put("email", email.getText().toString());
         params.put("password", password.getText().toString());
-        params.put("course", course.getText().toString());
-        params.put("type", "student");
-        params.put("batch", batch.getText().toString());
+        params.put("course", course);
+        params.put("role", "student");
+        params.put("branch", branch);
+        params.put("roll_number", email.getText().toString().substring(0, email.getText().toString().indexOf("@")));
 
         dialog = new ProgressDialog(context);
         dialog.setCancelable(false);
