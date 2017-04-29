@@ -133,13 +133,19 @@
     <orderEntry type="library" exported="" name="firebase-analytics-10.2.1" level="project" />
     <orderEntry type="library" exported="" name="picasso-2.5.2" level="project" />
     <orderEntry type="library" exported="" name="play-services-tasks-10.2.1" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" exported="" name="play-services-base-10.2.1" level="project" />
+=======
+>>>>>>> 420cf50c0b1089987fd6373eddde55b732597300
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-integration-1.3" level="project" />
     <orderEntry type="library" exported="" name="constraint-layout-solver-1.0.0-beta4" level="project" />
     <orderEntry type="library" exported="" name="design-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-core-ui-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="cardview-v7-25.3.1" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" exported="" name="play-services-auth-10.2.1" level="project" />
+=======
+>>>>>>> 420cf50c0b1089987fd6373eddde55b732597300
     <orderEntry type="library" exported="" name="customtabs-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="core-0.9.4.4" level="project" />
     <orderEntry type="library" exported="" name="support-v13-25.3.1" level="project" />
@@ -158,6 +164,10 @@
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-core-1.3" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-25.3.1" level="project" />
+<<<<<<< HEAD
+=======
+    <orderEntry type="library" exported="" name="expandablerecyclerview-1.3" level="project" />
+>>>>>>> 420cf50c0b1089987fd6373eddde55b732597300
     <orderEntry type="library" exported="" name="appcompat-v7-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="android-async-http-1.4.9" level="project" />
     <orderEntry type="library" exported="" name="animated-vector-drawable-25.3.1" level="project" />

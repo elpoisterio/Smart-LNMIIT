@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.Login"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,11 +26,13 @@
         <activity
             android:name=".activity.StaffSignUp"
             android:label="Faculty Sign Up"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.StudentSignUp"
             android:label="Student Sign Up"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.Home"
             android:label="Home"
@@ -37,7 +40,8 @@
         <activity
             android:name=".activity.CancelClass"
             android:label="Class Cancellation"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.UploadGrades"
             android:label="Upload Grades"
@@ -64,7 +68,8 @@
         <activity
             android:name=".activity.ComplaintsAndFeedback"
             android:label="@string/title_activity_complaints_and_feedback"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.Profile"
             android:label="@string/title_activity_profile"
@@ -76,6 +81,13 @@
         <activity
             android:name=".activity.Notifications"
             android:label="@string/title_activity_notifications"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.BranchActivity"
+            android:label="@string/title_activity_branch"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
             android:theme="@style/AppTheme.NoActionBar"/>
         <service
             android:name=".service.FirebaseMessaging">

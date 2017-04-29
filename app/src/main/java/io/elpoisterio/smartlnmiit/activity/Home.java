@@ -128,6 +128,10 @@ public class Home extends AppCompatActivity {
                        Intent intent3 = new Intent(Home.this , ComplaintsAndFeedback.class);
                        startActivity(intent3);
                        break;
+                   case 7:
+                        Intent intent4 = new Intent(Home.this , BranchActivity.class );
+                       startActivity(intent4);
+                       break;
 
 
                }
@@ -147,6 +151,7 @@ public class Home extends AppCompatActivity {
             "Upload Grades",
             "Applications",
             "Complaints and Feedback",
+            "Faculty"
     };
 
     private final int android_image_urls[] = {
@@ -157,6 +162,7 @@ public class Home extends AppCompatActivity {
             R.drawable.grades,
             R.drawable.application,
             R.drawable.complaint_icon,
+            R.drawable.faculty,
     };
 
 
