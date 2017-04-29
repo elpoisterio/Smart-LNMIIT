@@ -24,17 +24,19 @@ import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.loopj.android.http.RequestParams;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import io.elpoisterio.smartlnmiit.R;
+import io.elpoisterio.smartlnmiit.models.ModelUser;
 import io.elpoisterio.smartlnmiit.restClient.RestManager;
 import io.elpoisterio.smartlnmiit.utilities.CheckInternetConnection;
 import io.elpoisterio.smartlnmiit.utilities.HandlerConstant;
 import io.elpoisterio.smartlnmiit.utilities.HelperConstants;
 
-public class Login extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener{
+public class Login extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
     Button loginButton;
     EditText email;
@@ -60,11 +62,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
         updateUi();
 
     }
-    private void initView(){
+
+    private void initView() {
 
         email = (EditText) findViewById(R.id.input_email);
         password = (EditText) findViewById(R.id.input_password);
-        loginButton = (Button)findViewById(R.id.login);
+        loginButton = (Button) findViewById(R.id.login);
         signUpButtonFaculty = (Button) findViewById(R.id.sign_up_as_faculty);
         signUpButtonStudent = (Button) findViewById(R.id.sign_up_as_student);
         googleSignInButton = (SignInButton) findViewById(R.id.btn_sign_in_google);
@@ -83,29 +86,32 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
         signUpButtonStudent.setOnClickListener(this);
         googleSignInButton.setOnClickListener(this);
     }
-    private void updateUi(){
 
-        handler = new Handler(Looper.getMainLooper()){
+    private void updateUi() {
+
+        handler = new Handler(Looper.getMainLooper()) {
 
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
-                if(msg.what == HandlerConstant.FAILURE){
-                    Toast.makeText(Login.this,"Could not log in",Toast.LENGTH_SHORT).show();
-                }else {
+                hideDialog(dialog);
+                if (msg.what == HandlerConstant.FAILURE) {
+                    Toast.makeText(Login.this, "Could not log in", Toast.LENGTH_SHORT).show();
+                } else {
+                    saveToDB(email.getText().toString(), false, "!");
                     moveToHome();
                 }
-                hideDialog(dialog);
+
             }
         };
     }
 
-    private boolean checkEmptyFields(){
-        if(email.getText().toString().length()==0) {
+    private boolean checkEmptyFields() {
+        if (email.getText().toString().length() == 0) {
             Toast.makeText(Login.this, "Please enter your email", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if(password.getText().toString().length() == 0 ){
+        if (password.getText().toString().length() == 0) {
             Toast.makeText(Login.this, "Please enter password", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -113,41 +119,46 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
 
     }
 
+    private void saveToDB(String email, boolean isGoogleAuth, String token) {
+        ModelUser modelUser = new ModelUser();
+        modelUser.setEmail(email);
+        if (isGoogleAuth)
+            modelUser.setGoogleIdToken(token);
+    }
+
 
     @Override
     public void onClick(View v) {
-        if (v == loginButton){
+        if (v == loginButton) {
+            moveToHome();
             checkEmptyFields();
-            if(!HelperConstants.isEmailValid(email.getText().toString())){
+            if (!HelperConstants.isEmailValid(email.getText().toString())) {
                 Toast.makeText(Login.this, "Please use email id provided by college", Toast.LENGTH_SHORT).show();
             } else {
-                //callApi()
-               // moveToHome();
-                Intent intent = new Intent(Login.this , Home.class);
-                startActivity(intent);
 
-                if(!new CheckInternetConnection(Login.this).isConnectedToInternet()){
-                    Toast.makeText(context,"No internet connection",Toast.LENGTH_SHORT).show();
-                }else {
+                if (!new CheckInternetConnection(Login.this).isConnectedToInternet()) {
+                    Toast.makeText(context, "No internet connection", Toast.LENGTH_SHORT).show();
+                } else {
                     callApi();
                 }
 
             }
 
-        } else if(v == signUpButtonStudent){
-            Intent intent = new Intent(Login.this , StudentSignUp.class);
-            startActivity(intent);
-        }
-        else if(v==signUpButtonFaculty)
-        {
-            Intent intent = new Intent(Login.this , StaffSignUp.class);
-            startActivity(intent);
-        }
-        else if( v == googleSignInButton){
-            callGoogleAuth();
+        } else if (v == signUpButtonStudent) {
+            moveToSignUpScreen(StudentSignUp.class);
+        } else if (v == signUpButtonFaculty) {
+            moveToSignUpScreen(StaffSignUp.class);
+        } else if (v == googleSignInButton) {
+            if (!new CheckInternetConnection(Login.this).isConnectedToInternet()) {
+                Toast.makeText(context, "No internet connection", Toast.LENGTH_SHORT).show();
+            } else {
+                callGoogleAuth();
+            }
+
         }
     }
-    private void callGoogleAuth (){
+
+    private void callGoogleAuth() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
 
@@ -164,7 +175,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
 
     }
 
-    private void handleSignInResult ( GoogleSignInResult result){
+    private void handleSignInResult(GoogleSignInResult result) {
         if (result.isSuccess()) {
             // Signed in successfully, show authenticated UI.
             GoogleSignInAccount acct = result.getSignInAccount();
@@ -173,15 +184,22 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
             String email = acct.getEmail();
             String googleIdToken = acct.getIdToken();
 
+            saveToDB(email, true, googleIdToken);
+            moveToHome();
+
         } else {
             // Signed out, show unauthenticated UI.
-           Toast.makeText(this,"Login failed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Login failed", Toast.LENGTH_SHORT).show();
         }
 
 
     }
 
     private void callApi() {
+
+        final RequestParams params = new RequestParams();
+        params.put("email", email.getText().toString());
+        params.put("password", password.getText().toString());
 
         dialog = new ProgressDialog(Login.this);
         dialog.setCancelable(false);
@@ -192,7 +210,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
             @Override
             public void run() {
                 Looper.prepare();
-                new RestManager().getInstance().login(Login.this, email.getText().toString(), password.getText().toString(),handler);
+                new RestManager().getInstance().login(Login.this, params, handler);
                 Looper.loop();
 
             }
@@ -200,15 +218,15 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
 
     }
 
-    private void moveToSignUpScreen() {
-        Intent intent = new Intent(Login.this , Home.class);
+    private void moveToSignUpScreen(Class signUp) {
+        Intent intent = new Intent(Login.this, signUp);
         startActivity(intent);
         finish();
     }
 
 
     private void moveToHome() {
-        Intent intent = new Intent(Login.this , Home.class);
+        Intent intent = new Intent(Login.this, Home.class);
         startActivity(intent);
         finish();
     }
