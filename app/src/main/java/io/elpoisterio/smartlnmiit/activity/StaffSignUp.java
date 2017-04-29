@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 
@@ -33,6 +34,7 @@ import android.widget.Toast;
 
 import com.loopj.android.http.RequestParams;
 
+import io.elpoisterio.smartlnmiit.models.ModelUser;
 import io.elpoisterio.smartlnmiit.restClient.RestManager;
 import io.elpoisterio.smartlnmiit.utilities.CheckInternetConnection;
 import io.elpoisterio.smartlnmiit.utilities.HandlerConstant;
@@ -46,11 +48,6 @@ import io.elpoisterio.smartlnmiit.utilities.HelperConstants;
 
 public class StaffSignUp extends AppCompatActivity implements View.OnClickListener{
 
-    String[] SPINNERLIST = {"Dean of Student Affairs", "Dean of Faculty Affairs", "Dean of Academics", "Chief Warden"
-            , "Mess Warden", "HOD CSE", "HOD ECE", "HOD Physics", "HOD Maths", "HOD HSS"};
-
-    AVLoadingIndicatorView avi;
-    Button signupStaff;
 
     Context context = StaffSignUp.this;
     Handler handler = new Handler();
@@ -60,9 +57,18 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
     EditText password;
     EditText name;
     EditText title;
-    EditText designation;
+    String designation;
     EditText branch;
+    MaterialBetterSpinner materialDesignSpinnerDesignation;
 
+    String[] SPINNERLIST = {"Dean of Student Affairs", "Dean of Faculty Affairs", "Dean of Academics", "Chief Warden"
+            ,"Mess Warden" , "HOD CSE" , "HOD ECE" , "HOD Physics" , "HOD Maths" ,"HOD MME", "HOD HSS"};
+
+
+    AVLoadingIndicatorView avi;
+    Button signupStaff;
+
+    
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,10 +77,9 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_faculty_sign_up);
 
-        signupStaff = (Button) findViewById(R.id.signup_faculty);
-        avi = (AVLoadingIndicatorView) findViewById(R.id.avi);
-
+        initView();
         updateUi();
+
 
         signupStaff.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,11 +107,37 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
             }
         });
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
+
+
+    }
+    private void initView(){
+
+        title = (EditText) findViewById(R.id.input_title);
+        name = (EditText) findViewById(R.id.input_name);
+        email = (EditText) findViewById(R.id.input_email);
+        password = (EditText) findViewById(R.id.input_password);
+        signupStaff = (Button)findViewById(R.id.signup_faculty);
+        avi = (AVLoadingIndicatorView) findViewById(R.id.avi);
+
+        signupStaff.setOnClickListener(this);
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_dropdown_item, SPINNERLIST);
-        MaterialBetterSpinner materialDesignSpinner = (MaterialBetterSpinner)
-                findViewById(R.id.android_material_design_spinner);
-        materialDesignSpinner.setAdapter(arrayAdapter);
+
+        materialDesignSpinnerDesignation = (MaterialBetterSpinner) findViewById(R.id.android_material_design_spinner);
+        materialDesignSpinnerDesignation.setAdapter(arrayAdapter);
+
+        materialDesignSpinnerDesignation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                designation = arrayAdapter.getItem(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
     }
 
@@ -120,21 +151,40 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
 
     }
 
-    private void updateUi() {
+
+
+
+    private void updateUi(){
+
 
         handler = new Handler(Looper.getMainLooper()) {
 
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
-                if (msg.what == HandlerConstant.FAILURE) {
-                    Toast.makeText(context, "Could not log in", Toast.LENGTH_SHORT).show();
-                } else {
+                hideDialog(dialog);
+                if(msg.what == HandlerConstant.FAILURE){
+                    Toast.makeText(context,"Could not log in",Toast.LENGTH_SHORT).show();
+                }else {
+                    saveToDB();
+
                     moveToHome();
                 }
-                hideDialog(dialog);
+
             }
+
+
         };
+    }
+
+    private void saveToDB (){
+        ModelUser modelUser = new ModelUser();
+        modelUser.setEmail(email.getText().toString());
+        modelUser.setName(name.getText().toString());
+        modelUser.setType("teacher");
+        modelUser.setTitle(title.getText().toString());
+        if(!designation.equals(""))
+            modelUser.setDesignation(designation);
     }
 
     private void callApi() {
@@ -143,10 +193,9 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
         params.put("email", email.getText().toString());
         params.put("password", password.getText().toString());
         params.put("name", name.getText().toString());
-        params.put("branch", branch.getText().toString());
-        params.put("type", "faculty");
-        params.put("batch", title.getText().toString());
-        params.put("designation", designation.getText().toString());
+        params.put("role", "teacher");
+        params.put("title", title.getText().toString());
+        params.put("designation", designation);
 
         dialog = new ProgressDialog(context);
         dialog.setCancelable(false);

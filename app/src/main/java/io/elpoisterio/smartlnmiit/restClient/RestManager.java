@@ -2,6 +2,7 @@ package io.elpoisterio.smartlnmiit.restClient;
 
 import android.content.Context;
 import android.os.Handler;
+import android.util.Log;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -13,6 +14,8 @@ import cz.msebera.android.httpclient.Header;
 import io.elpoisterio.smartlnmiit.utilities.AppPreferences;
 import io.elpoisterio.smartlnmiit.utilities.ApplicationConstant;
 import io.elpoisterio.smartlnmiit.utilities.HandlerConstant;
+
+import static android.R.attr.key;
 
 /**
  * Created by rishabh on 17/3/17.
@@ -31,20 +34,18 @@ public class RestManager {
         return restManager;
     }
 
-    public void login(final Context context, String email, String password, final Handler handler){
+    public void login(final Context context, RequestParams params, final Handler handler){
 
-        RequestParams params = new RequestParams();
-        params.put("email", email);
-        params.put("password", password);
+
         LnmiitRestClient.post(ApplicationConstant.login,params, new JsonHttpResponseHandler(){
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 super.onSuccess(statusCode, headers, response);
-                if(response.has("token"))
+                if(response.has("_id"))
                     try {
-                        String token = response.getString("token");
-                        AppPreferences.writeString(context, "token", token);
+                        String token = response.getString("_id");
+                        AppPreferences.writeString(context, "_id", token);
                         HandlerConstant.sendMessage(handler, HandlerConstant.SUCCESS);
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -67,11 +68,11 @@ public class RestManager {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 super.onSuccess(statusCode, headers, response);
-                if(response.has("token")){
+                if(response.has("_id")){
                     String token = null;
                     try {
-                        token = response.getString("token");
-                        AppPreferences.writeString(context, "token", token);
+                        token = response.getString("_id");
+                        AppPreferences.writeString(context, "_id", token);
                         HandlerConstant.sendMessage(handler, HandlerConstant.SUCCESS);
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -135,5 +136,82 @@ public class RestManager {
                 HandlerConstant.sendMessage(handler, HandlerConstant.FAILURE);
             }
         });
+    }
+
+    public void sendFirebaseToken(final Context context, final String token){
+        String oldtoken = AppPreferences.readString(context, "firebase_key", null);
+        RequestParams params = new RequestParams();
+        params.put("firebase_key", token);
+        params.put("old_key", oldtoken);
+
+        LnmiitRestClient.post(ApplicationConstant.postfirebaseKey, params, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                if (response.has("success") && response.optString("success").equals("true")) {
+                    Log.i("key", "success");
+                    AppPreferences.writeString(context, "firebase_key", token);
+                    AppPreferences.writeBoolean(context, "firebase_reg", true);
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                AppPreferences.writeBoolean(context, "firebase_reg", false);
+                Log.i("firebase_error", responseString);
+            }
+        });
+
+    }
+
+    public void getProfile(final Context context, RequestParams params, final Handler handler){
+
+        LnmiitRestClient.get(ApplicationConstant.getUserProfile,params, new JsonHttpResponseHandler(){
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                try {
+                    if(response.has("success") && response.getString("success").equals("true")){
+                        HandlerConstant.sendMessage(handler, HandlerConstant.SUCCESS);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                HandlerConstant.sendMessage(handler, HandlerConstant.FAILURE);
+            }
+
+        } );
+    }
+
+    public void editProfile(final Context context, RequestParams params, final Handler handler){
+
+        LnmiitRestClient.get(ApplicationConstant.editProfile,params, new JsonHttpResponseHandler(){
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                try {
+                    if(response.has("success") && response.getString("success").equals("true")){
+                        HandlerConstant.sendMessage(handler, HandlerConstant.SUCCESS);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                HandlerConstant.sendMessage(handler, HandlerConstant.FAILURE);
+            }
+
+        } );
     }
 }
