@@ -164,4 +164,54 @@ public class RestManager {
         });
 
     }
+
+    public void getProfile(final Context context, RequestParams params, final Handler handler){
+
+        LnmiitRestClient.get(ApplicationConstant.getUserProfile,params, new JsonHttpResponseHandler(){
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                try {
+                    if(response.has("success") && response.getString("success").equals("true")){
+                        HandlerConstant.sendMessage(handler, HandlerConstant.SUCCESS);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                HandlerConstant.sendMessage(handler, HandlerConstant.FAILURE);
+            }
+
+        } );
+    }
+
+    public void editProfile(final Context context, RequestParams params, final Handler handler){
+
+        LnmiitRestClient.get(ApplicationConstant.editProfile,params, new JsonHttpResponseHandler(){
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                try {
+                    if(response.has("success") && response.getString("success").equals("true")){
+                        HandlerConstant.sendMessage(handler, HandlerConstant.SUCCESS);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                HandlerConstant.sendMessage(handler, HandlerConstant.FAILURE);
+            }
+
+        } );
+    }
 }
