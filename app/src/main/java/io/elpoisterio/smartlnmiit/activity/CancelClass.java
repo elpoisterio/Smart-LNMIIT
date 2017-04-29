@@ -51,7 +51,7 @@ public class CancelClass extends AppCompatActivity implements View.OnClickListen
 
     private void initView() {
         courseName = (EditText) findViewById(R.id.subject);
-        batch = (EditText) findViewById(R.id.year);
+
         time = (EditText) findViewById(R.id.time);
         lectureHall = (EditText) findViewById(R.id.LT);
         reason = (EditText) findViewById(R.id.reason);
@@ -113,7 +113,7 @@ public class CancelClass extends AppCompatActivity implements View.OnClickListen
         params.put("email", email);
         params.put("lt", lectureHall.getText().toString());
         params.put("time", time.getText().toString());
-        params.put("batch", batch.getText().toString());
+     /*   params.put("batch", batch.getText().toString());*/
         params.put("date", date.getText().toString());
         params.put("reason", reason.getText().toString());
 

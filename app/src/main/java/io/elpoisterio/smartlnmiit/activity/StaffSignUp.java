@@ -44,71 +44,13 @@ import io.elpoisterio.smartlnmiit.utilities.HelperConstants;
  */
 
 
-public class StaffSignUp extends AppCompatActivity{
+public class StaffSignUp extends AppCompatActivity implements View.OnClickListener{
 
     String[] SPINNERLIST = {"Dean of Student Affairs", "Dean of Faculty Affairs", "Dean of Academics", "Chief Warden"
-            ,"Mess Warden" , "HOD CSE" , "HOD ECE" , "HOD Physics" , "HOD Maths" , "HOD HSS"};
+            , "Mess Warden", "HOD CSE", "HOD ECE", "HOD Physics", "HOD Maths", "HOD HSS"};
 
     AVLoadingIndicatorView avi;
     Button signupStaff;
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_faculty_sign_up);
-
-        signupStaff = (Button)findViewById(R.id.signup_faculty);
-        avi = (AVLoadingIndicatorView) findViewById(R.id.avi);
-
-
-       signupStaff.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               new Handler().postDelayed(new Runnable() {
-
-                   @Override
-                   public void run()
-                   {
-                       startAnim();
-
-                   }
-               }, 0);
-
-
-               new Handler().postDelayed(new Runnable() {
-
-                   @Override
-                   public void run()
-                   {
-
-                       Intent intent=new Intent(getApplicationContext(),Home.class);
-                       finish();
-                       startActivity(intent);
-                   }
-               }, 5000);
-           }
-       });
-
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_dropdown_item, SPINNERLIST);
-        MaterialBetterSpinner materialDesignSpinner = (MaterialBetterSpinner)
-                findViewById(R.id.android_material_design_spinner);
-        materialDesignSpinner.setAdapter(arrayAdapter);
-
-    }
-
-    void startAnim(){
-        avi.show();
-
-    }
-
-    void stopAnim(){
-        avi.hide();
-
-    }
-public class StaffSignUp extends AppCompatActivity implements View.OnClickListener{
 
     Context context = StaffSignUp.this;
     Handler handler = new Handler();
@@ -124,21 +66,70 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_faculty_sign_up);
+
+        signupStaff = (Button) findViewById(R.id.signup_faculty);
+        avi = (AVLoadingIndicatorView) findViewById(R.id.avi);
 
         updateUi();
+
+        signupStaff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        startAnim();
+
+                    }
+                }, 0);
+
+
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+
+                        Intent intent = new Intent(getApplicationContext(), Home.class);
+                        finish();
+                        startActivity(intent);
+                    }
+                }, 5000);
+            }
+        });
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_dropdown_item, SPINNERLIST);
+        MaterialBetterSpinner materialDesignSpinner = (MaterialBetterSpinner)
+                findViewById(R.id.android_material_design_spinner);
+        materialDesignSpinner.setAdapter(arrayAdapter);
+
     }
 
+    void startAnim() {
+        avi.show();
 
-    private void updateUi(){
+    }
 
-        handler = new Handler(Looper.getMainLooper()){
+    void stopAnim() {
+        avi.hide();
+
+    }
+
+    private void updateUi() {
+
+        handler = new Handler(Looper.getMainLooper()) {
 
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
-                if(msg.what == HandlerConstant.FAILURE){
-                    Toast.makeText(context,"Could not log in",Toast.LENGTH_SHORT).show();
-                }else {
+                if (msg.what == HandlerConstant.FAILURE) {
+                    Toast.makeText(context, "Could not log in", Toast.LENGTH_SHORT).show();
+                } else {
                     moveToHome();
                 }
                 hideDialog(dialog);
@@ -166,7 +157,7 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
             @Override
             public void run() {
                 Looper.prepare();
-                new RestManager().getInstance().signUp(context,params, handler);
+                new RestManager().getInstance().signUp(context, params, handler);
                 Looper.loop();
 
             }
@@ -179,18 +170,20 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
         startActivity(intent);
         finish();
     }
-    private void hideDialog(ProgressDialog dialog){
+
+    private void hideDialog(ProgressDialog dialog) {
         if (dialog != null && dialog.isShowing()) {
             dialog.dismiss();
             Log.i("HeyThere ", "hide dialog is running !!!");
         }
     }
-    private boolean checkEmptyFields(){
-        if(email.getText().toString().length()==0) {
+
+    private boolean checkEmptyFields() {
+        if (email.getText().toString().length() == 0) {
             Toast.makeText(context, "Please enter your email", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if(password.getText().toString().length() == 0 ){
+        if (password.getText().toString().length() == 0) {
             Toast.makeText(context, "Please enter password", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -200,9 +193,9 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        if(v== signUp){
+        if (v == signUp) {
             checkEmptyFields();
-            if(!HelperConstants.isEmailValid(email.getText().toString())){
+            if (!HelperConstants.isEmailValid(email.getText().toString())) {
                 Toast.makeText(context, "Please use email id provided by college", Toast.LENGTH_SHORT).show();
 
             } else {
@@ -218,3 +211,8 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
 
     }
 }
+
+
+
+
+
