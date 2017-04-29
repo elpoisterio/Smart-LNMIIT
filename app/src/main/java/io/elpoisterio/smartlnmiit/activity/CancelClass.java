@@ -113,7 +113,7 @@ public class CancelClass extends AppCompatActivity implements View.OnClickListen
         params.put("email", email);
         params.put("lt", lectureHall.getText().toString());
         params.put("time", time.getText().toString());
-        params.put("batch", batch.getText().toString());
+     /*   params.put("batch", batch.getText().toString());*/
         params.put("date", date.getText().toString());
         params.put("reason", reason.getText().toString());
 

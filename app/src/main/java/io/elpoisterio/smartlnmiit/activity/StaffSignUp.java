@@ -48,6 +48,7 @@ import io.elpoisterio.smartlnmiit.utilities.HelperConstants;
 
 public class StaffSignUp extends AppCompatActivity implements View.OnClickListener{
 
+
     Context context = StaffSignUp.this;
     Handler handler = new Handler();
     ProgressDialog dialog;
@@ -63,8 +64,11 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
     String[] SPINNERLIST = {"Dean of Student Affairs", "Dean of Faculty Affairs", "Dean of Academics", "Chief Warden"
             ,"Mess Warden" , "HOD CSE" , "HOD ECE" , "HOD Physics" , "HOD Maths" ,"HOD MME", "HOD HSS"};
 
+
     AVLoadingIndicatorView avi;
     Button signupStaff;
+
+    
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,34 +81,31 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
         updateUi();
 
 
+        signupStaff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new Handler().postDelayed(new Runnable() {
 
-       signupStaff.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startAnim();
 
-                   @Override
-                   public void run()
-                   {
-                       startAnim();
-
-                   }
-               }, 0);
+                    }
+                }, 0);
 
 
-               new Handler().postDelayed(new Runnable() {
+                new Handler().postDelayed(new Runnable() {
 
-                   @Override
-                   public void run()
-                   {
+                    @Override
+                    public void run() {
 
-                       Intent intent=new Intent(getApplicationContext(),Home.class);
-                       finish();
-                       startActivity(intent);
-                   }
-               }, 5000);
-           }
-       });
+                        Intent intent = new Intent(getApplicationContext(), Home.class);
+                        finish();
+                        startActivity(intent);
+                    }
+                }, 5000);
+            }
+        });
 
 
 
@@ -140,21 +141,23 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
 
     }
 
-    void startAnim(){
+    void startAnim() {
         avi.show();
 
     }
 
-    void stopAnim(){
+    void stopAnim() {
         avi.hide();
 
     }
 
 
 
+
     private void updateUi(){
 
-        handler = new Handler(Looper.getMainLooper()){
+
+        handler = new Handler(Looper.getMainLooper()) {
 
             @Override
             public void handleMessage(Message msg) {
@@ -164,6 +167,7 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
                     Toast.makeText(context,"Could not log in",Toast.LENGTH_SHORT).show();
                 }else {
                     saveToDB();
+
                     moveToHome();
                 }
 
@@ -202,7 +206,7 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
             @Override
             public void run() {
                 Looper.prepare();
-                new RestManager().getInstance().signUp(context,params, handler);
+                new RestManager().getInstance().signUp(context, params, handler);
                 Looper.loop();
 
             }
@@ -215,18 +219,20 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
         startActivity(intent);
         finish();
     }
-    private void hideDialog(ProgressDialog dialog){
+
+    private void hideDialog(ProgressDialog dialog) {
         if (dialog != null && dialog.isShowing()) {
             dialog.dismiss();
             Log.i("HeyThere ", "hide dialog is running !!!");
         }
     }
-    private boolean checkEmptyFields(){
-        if(email.getText().toString().length()==0) {
+
+    private boolean checkEmptyFields() {
+        if (email.getText().toString().length() == 0) {
             Toast.makeText(context, "Please enter your email", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if(password.getText().toString().length() == 0 ){
+        if (password.getText().toString().length() == 0) {
             Toast.makeText(context, "Please enter password", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -236,9 +242,9 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        if(v== signUp){
+        if (v == signUp) {
             checkEmptyFields();
-            if(!HelperConstants.isEmailValid(email.getText().toString())){
+            if (!HelperConstants.isEmailValid(email.getText().toString())) {
                 Toast.makeText(context, "Please use email id provided by college", Toast.LENGTH_SHORT).show();
 
             } else {
@@ -254,3 +260,8 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
 
     }
 }
+
+
+
+
+

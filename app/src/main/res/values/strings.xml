@@ -41,6 +41,8 @@
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_feeds">Feeds</string>
     <string name="title_activity_notifications">Notifications</string>
+    <string name="title_activity_faculty">Faculty</string>
+    <string name="title_activity_branch">BranchActivity</string>
 
 
 </resources>
