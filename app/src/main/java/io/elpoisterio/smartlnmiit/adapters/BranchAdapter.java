@@ -11,6 +11,7 @@ import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 import java.util.List;
 
 import io.elpoisterio.smartlnmiit.R;
+import io.elpoisterio.smartlnmiit.models.ModelTeacher;
 import io.elpoisterio.smartlnmiit.utilities.Branch;
 import io.elpoisterio.smartlnmiit.utilities.BranchViewHolder;
 import io.elpoisterio.smartlnmiit.utilities.Faculty;
@@ -47,8 +48,8 @@ public class BranchAdapter  extends ExpandableRecyclerViewAdapter<BranchViewHold
 
     @Override
     public void onBindChildViewHolder(FacultyViewHolder holder, int flatPosition, ExpandableGroup group, int childIndex) {
-        final Faculty faculty = ((Branch)group).getItems().get(childIndex);
-        holder.onBind(faculty,group);
+        final ModelTeacher modelTeacher = ((Branch)group).getItems().get(childIndex);
+        holder.onBind(modelTeacher,group);
     }
 
     @Override
