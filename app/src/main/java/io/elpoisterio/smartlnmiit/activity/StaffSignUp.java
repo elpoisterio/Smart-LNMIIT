@@ -36,6 +36,7 @@ import com.loopj.android.http.RequestParams;
 
 import io.elpoisterio.smartlnmiit.models.ModelUser;
 import io.elpoisterio.smartlnmiit.restClient.RestManager;
+import io.elpoisterio.smartlnmiit.utilities.AppPreferences;
 import io.elpoisterio.smartlnmiit.utilities.CheckInternetConnection;
 import io.elpoisterio.smartlnmiit.utilities.HandlerConstant;
 import io.elpoisterio.smartlnmiit.utilities.HelperConstants;
@@ -61,7 +62,7 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
     EditText branch;
     MaterialBetterSpinner materialDesignSpinnerDesignation;
 
-    String[] SPINNERLIST = {"Dean of Student Affairs", "Dean of Faculty Affairs", "Dean of Academics", "Chief Warden"
+    String[] SPINNERLIST = {"Dean of Student Affairs", "Dean of FacultyActivity Affairs", "Dean of Academics", "Chief Warden"
             ,"Mess Warden" , "HOD CSE" , "HOD ECE" , "HOD Physics" , "HOD Maths" ,"HOD MME", "HOD HSS"};
 
 
@@ -210,12 +211,16 @@ public class StaffSignUp extends AppCompatActivity implements View.OnClickListen
                 Looper.loop();
 
             }
-        });
+        }).start();
 
     }
 
     private void moveToHome() {
-        Intent intent = new Intent(context, Home.class);
+        Class next = HomeTeacher.class;
+        if(AppPreferences.readString(this,"role","student").equalsIgnoreCase("student")){
+            next = Home.class;
+        }
+        Intent intent = new Intent(context, next);
         startActivity(intent);
         finish();
     }

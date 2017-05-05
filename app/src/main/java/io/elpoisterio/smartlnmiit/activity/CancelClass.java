@@ -1,6 +1,7 @@
 package io.elpoisterio.smartlnmiit.activity;
 
 import android.app.ProgressDialog;
+import android.app.Service;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -19,7 +21,13 @@ import android.widget.Toast;
 import com.loopj.android.http.RequestParams;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+
 import io.elpoisterio.smartlnmiit.R;
+import io.elpoisterio.smartlnmiit.models.ModelTeacher;
+import io.elpoisterio.smartlnmiit.models.ModelUser;
 import io.elpoisterio.smartlnmiit.restClient.RestManager;
 import io.elpoisterio.smartlnmiit.utilities.CheckInternetConnection;
 import io.elpoisterio.smartlnmiit.utilities.HandlerConstant;
@@ -30,7 +38,7 @@ public class CancelClass extends AppCompatActivity implements View.OnClickListen
     EditText courseName;
     EditText batch;
     EditText time;
-    EditText date;
+    String date;
     EditText lectureHall;
     EditText reason;
     Button send;
@@ -46,7 +54,6 @@ public class CancelClass extends AppCompatActivity implements View.OnClickListen
         initView();
         updateUI();
 
-
     }
 
     private void initView() {
@@ -57,6 +64,7 @@ public class CancelClass extends AppCompatActivity implements View.OnClickListen
         reason = (EditText) findViewById(R.id.reason);
         send = (Button) findViewById(R.id.send);
         send.setOnClickListener(this);
+        time.setOnClickListener(this);
     }
 
     private void updateUI() {
@@ -90,16 +98,33 @@ public class CancelClass extends AppCompatActivity implements View.OnClickListen
             } else {
                 callApi();
             }
+        } else if (v == time ){
+            InputMethodManager imm = (InputMethodManager) this.getSystemService(Service.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(time.getWindowToken(), 0);
+            Calendar now = Calendar.getInstance();
+            DatePickerDialog dpd = DatePickerDialog.newInstance(
+                    CancelClass.this,
+                    now.get(Calendar.YEAR),
+                    now.get(Calendar.MONTH),
+                    now.get(Calendar.DAY_OF_MONTH)
+            );
+            dpd.setMinDate(now);
+            dpd.show(this.getFragmentManager(),"Datepickerdialog");
+
         }
     }
 
     private boolean checkEmptyFields() {
         if (courseName.getText().toString().length() == 0) {
-            Toast.makeText(context, "Please enter your email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Please enter course name", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (batch.getText().toString().length() == 0) {
-            Toast.makeText(context, "Please enter password", Toast.LENGTH_SHORT).show();
+        if (date.length() == 0) {
+            Toast.makeText(context, "Please enter date", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(reason.getText().toString().length() == 0) {
+            Toast.makeText(context, "Please enter the reason",Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
@@ -107,15 +132,18 @@ public class CancelClass extends AppCompatActivity implements View.OnClickListen
     }
 
     private void callApi() {
-        String email = "";
+
+        String email = ModelUser.listAll(ModelUser.class).get(0).getEmail();
         final RequestParams params = new RequestParams();
-        params.put("courseName", courseName.getText().toString());
-        params.put("email", email);
+        String body = courseName.getText().toString() + "\n" + date + "\n"+reason.getText().toString() ;
+        params.put("from", email);
+        params.put("approval", "doaa@lnmiit.ac.in");
+        //params.put("to",);
         params.put("lt", lectureHall.getText().toString());
         params.put("time", time.getText().toString());
      /*   params.put("batch", batch.getText().toString());*/
-        params.put("date", date.getText().toString());
-        params.put("reason", reason.getText().toString());
+        params.put("date", date);
+        params.put("body", body);
 
 
         dialog = new ProgressDialog(context);
@@ -127,16 +155,17 @@ public class CancelClass extends AppCompatActivity implements View.OnClickListen
             @Override
             public void run() {
                 Looper.prepare();
-                new RestManager().getInstance().signUp(context, params, handler);
+                new RestManager().getInstance().sendApplication(context, params, handler);
                 Looper.loop();
 
             }
-        });
+        }).start();
 
     }
 
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
+        date = year + "-" + (monthOfYear + 1) + "-" + dayOfMonth;
 
     }
 }

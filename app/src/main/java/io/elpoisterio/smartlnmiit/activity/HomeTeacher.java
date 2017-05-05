@@ -20,13 +20,17 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-import io.elpoisterio.smartlnmiit.utilities.AndroidVersion;
-import io.elpoisterio.smartlnmiit.adapters.HomeRecylerAdapter;
 import io.elpoisterio.smartlnmiit.R;
+import io.elpoisterio.smartlnmiit.adapters.HomeRecylerAdapter;
+import io.elpoisterio.smartlnmiit.utilities.AndroidVersion;
 import io.elpoisterio.smartlnmiit.utilities.AppPreferences;
 import io.elpoisterio.smartlnmiit.widgets.RecyclerItemClickListener;
 
-public class Home extends AppCompatActivity {
+/**
+ * Created by rishabh on 5/5/17.
+ */
+
+public class HomeTeacher extends AppCompatActivity {
 
     RecyclerView recyclerView ;
     BottomNavigationView bnv;
@@ -72,20 +76,20 @@ public class Home extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.action_feeds:
-                                Intent intent1 = new Intent(Home.this , Feeds.class);
+                                Intent intent1 = new Intent(HomeTeacher.this , Feeds.class);
                                 startActivity(intent1);
                                 break;
                             case R.id.action_profile:
-                                   Intent intent = new Intent(Home.this , Profile.class);
+                                Intent intent = new Intent(HomeTeacher.this , Profile.class);
                                 startActivity(intent);
                                 break;
                             case R.id.action_notification:
-                                Intent intent2 = new Intent(Home.this , Notifications.class);
+                                Intent intent2 = new Intent(HomeTeacher.this , Notifications.class);
                                 startActivity(intent2);
                                 break;
 
                             case R.id.action_group:
-                                /*Intent intent3 = new Intent(Home.this , .class);
+                                /*Intent intent3 = new Intent(HomeTeacher.this , .class);
                                 startActivity(intent2);*/
                                 break;
                         }
@@ -99,35 +103,43 @@ public class Home extends AppCompatActivity {
                 .setShowTitle(true)
                 .build();
 
-        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(Home.this, new RecyclerItemClickListener.OnItemClickListener() {
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(HomeTeacher.this, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-               switch(position)
-               {
-                   case 0:
-                       mCustomTabsIntent.launchUrl(Home.this, Uri.parse(websiteURL));
-                       break;
-                   case 1:
-                       mCustomTabsIntent.launchUrl(Home.this, Uri.parse(placementUrl));
-                       break;
-                   case 2 :
-                       mCustomTabsIntent.launchUrl(Home.this, Uri.parse(misURL));
-                   break;
-                   case 3:
-                       Intent intent2 = new Intent(Home.this , Applications.class);
-                       startActivity(intent2);
-                       break;
-                   case 4:
-                       Intent intent3 = new Intent(Home.this , ComplaintsAndFeedback.class);
-                       startActivity(intent3);
-                       break;
-                   case 5:
-                        Intent intent4 = new Intent(Home.this , FacultyActivity.class );
-                       startActivity(intent4);
-                       break;
+                switch(position)
+                {
+                    case 0:
+                        mCustomTabsIntent.launchUrl(HomeTeacher.this, Uri.parse(websiteURL));
+                        break;
+                    case 1:
+                        mCustomTabsIntent.launchUrl(HomeTeacher.this, Uri.parse(placementUrl));
+                        break;
+                    case 2 :
+                        mCustomTabsIntent.launchUrl(HomeTeacher.this, Uri.parse(misURL));
+                        break;
+                    case 3:
+                        Intent intent = new Intent(HomeTeacher.this , CancelClass.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        Intent intent1 = new Intent(HomeTeacher.this , UploadGrades.class);
+                        startActivity(intent1);
+                        break;
+                    case 5:
+                        Intent intent2 = new Intent(HomeTeacher.this , Applications.class);
+                        startActivity(intent2);
+                        break;
+                    case 6:
+                        Intent intent3 = new Intent(HomeTeacher.this , ComplaintsAndFeedback.class);
+                        startActivity(intent3);
+                        break;
+                    case 7:
+                        Intent intent4 = new Intent(HomeTeacher.this , FacultyActivity.class );
+                        startActivity(intent4);
+                        break;
 
 
-               }
+                }
 
 
             }
@@ -135,11 +147,14 @@ public class Home extends AppCompatActivity {
         ));
 
     }
+    
 
     private final String android_version_names[] = {
             "LNMIIT Website",
             "Placement Cell",
             "MIS",
+            "Class Cancellation",
+            "Upload Grades",
             "Applications",
             "Complaints and Feedback",
             "FacultyActivity"
@@ -149,11 +164,13 @@ public class Home extends AppCompatActivity {
             R.drawable.logo,
             R.drawable.logo,
             R.drawable.logo,
+            R.drawable.no_class,
+            R.drawable.grades,
             R.drawable.application,
             R.drawable.complaint_icon,
             R.drawable.faculty,
     };
-
+    
 
 
     private void initViews(){
@@ -179,5 +196,4 @@ public class Home extends AppCompatActivity {
         }
         return android_version;
     }
-
 }

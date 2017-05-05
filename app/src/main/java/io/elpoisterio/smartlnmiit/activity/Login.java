@@ -32,6 +32,7 @@ import java.util.regex.Pattern;
 import io.elpoisterio.smartlnmiit.R;
 import io.elpoisterio.smartlnmiit.models.ModelUser;
 import io.elpoisterio.smartlnmiit.restClient.RestManager;
+import io.elpoisterio.smartlnmiit.utilities.AppPreferences;
 import io.elpoisterio.smartlnmiit.utilities.CheckInternetConnection;
 import io.elpoisterio.smartlnmiit.utilities.HandlerConstant;
 import io.elpoisterio.smartlnmiit.utilities.HelperConstants;
@@ -58,9 +59,18 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
-        initView();
-        updateUi();
 
+        if(isLoggedIn())
+            moveToHome();
+        else {
+            initView();
+            updateUi();
+        }
+
+
+    }
+    private boolean isLoggedIn(){
+        return AppPreferences.readBoolean(this,"loggedIn",false);
     }
 
     private void initView() {
@@ -124,13 +134,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
         modelUser.setEmail(email);
         if (isGoogleAuth)
             modelUser.setGoogleIdToken(token);
+        modelUser.save();
     }
 
 
     @Override
     public void onClick(View v) {
         if (v == loginButton) {
-            moveToHome();
+            //moveToHome();
             checkEmptyFields();
             if (!HelperConstants.isEmailValid(email.getText().toString())) {
                 Toast.makeText(Login.this, "Please use email id provided by college", Toast.LENGTH_SHORT).show();
@@ -197,6 +208,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
 
     private void callApi() {
 
+
         final RequestParams params = new RequestParams();
         params.put("email", email.getText().toString());
         params.put("password", password.getText().toString());
@@ -214,7 +226,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
                 Looper.loop();
 
             }
-        });
+        }).start();
 
     }
 
@@ -224,9 +236,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
         finish();
     }
 
+    private String role(){
+        return AppPreferences.readString(this,"role", "student");
+    }
 
     private void moveToHome() {
-        Intent intent = new Intent(Login.this, Home.class);
+        Class next = HomeTeacher.class;
+        if (role().equalsIgnoreCase("student")){
+             next = Home.class;
+        }
+        Intent intent = new Intent(Login.this, next);
         startActivity(intent);
         finish();
     }
