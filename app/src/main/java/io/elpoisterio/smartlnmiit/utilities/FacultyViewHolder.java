@@ -7,6 +7,7 @@ import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder;
 
 import io.elpoisterio.smartlnmiit.R;
+import io.elpoisterio.smartlnmiit.models.ModelTeacher;
 
 /**
  * Created by lenovo on 28-04-2017.
@@ -21,7 +22,7 @@ public class FacultyViewHolder extends ChildViewHolder {
 
     }
 
-    public void onBind(Faculty faculty , ExpandableGroup group) {
-        facultyName.setText(faculty.getName());
+    public void onBind(ModelTeacher modelTeacher , ExpandableGroup group) {
+        facultyName.setText(modelTeacher.getName());
     }
 }
