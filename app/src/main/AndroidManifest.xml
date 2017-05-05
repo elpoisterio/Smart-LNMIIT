@@ -57,7 +57,7 @@
             android:value="smart_lnmiit_db.db" />
         <meta-data
             android:name="VERSION"
-            android:value="1" />
+            android:value="3" />
         <meta-data
             android:name="QUERY_LOG"
             android:value="true" />
@@ -84,7 +84,7 @@
 
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.BranchActivity"
+            android:name=".activity.FacultyActivity"
             android:label="@string/title_activity_branch"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
