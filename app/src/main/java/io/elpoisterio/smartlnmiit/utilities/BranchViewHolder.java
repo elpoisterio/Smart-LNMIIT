@@ -32,14 +32,14 @@ public class BranchViewHolder extends GroupViewHolder {
 
     @Override
     public void expand() {
-        branchTitle.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_keyboard_arrow_down_black_24dp, 0);
+        branchTitle.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_keyboard_arrow_down_white_24dp, 0);
         Log.i("Adapter", "expand");
     }
 
     @Override
     public void collapse() {
         Log.i("Adapter", "collapse");
-        branchTitle.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_keyboard_arrow_up_black_24dp, 0);
+        branchTitle.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_keyboard_arrow_up_white_24dp, 0);
     }
 
 

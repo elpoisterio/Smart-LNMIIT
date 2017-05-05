@@ -1,36 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="#232D37">
+    android:background="#ffffff">
 
     <TextView
         android:id="@+id/faculty_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:text="Faculty name" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:textColor="#ffffff"
-        android:text="abc@lnmiit.ac.in"/>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:textColor="#ffffff"
-        android:text="Available"/>
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#c0c0c0"
-        />
-</LinearLayout>
+</RelativeLayout>
