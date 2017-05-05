@@ -99,7 +99,7 @@
             android:textColor="#ffffff"
             android:background="@drawable/edittext_border"
             android:inputType="text"
-            android:hint="Time slot" />
+            android:hint="Date" />
 
     </android.support.design.widget.TextInputLayout>
 
