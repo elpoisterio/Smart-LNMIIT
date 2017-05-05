@@ -46,8 +46,8 @@ public class UploadGrades extends AppCompatActivity implements View.OnClickListe
     EditText batch;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle savedInstanceState)  {
+       super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_grades);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

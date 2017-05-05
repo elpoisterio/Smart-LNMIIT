@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\8598d5c2807d1f44da96b94ca57af98294c9b49b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="12032271e6be735e811ad529cb08ff066c381640">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a8d259c9ddd137cdc2ea3be5bbdf2006a57d1b35\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c0dbabca65307d87981e3e807bfa7f8534f8c458">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_1f6a73de738bfb6bcec719cde77cad528a6777cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\28bc8e9363157ee6ebdd699f53e297108e1c6d21\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="25f55515117e14a658120a7b01a9ea5170409db4">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dd48f3e969e3ce9641bb8d986dea49b049e9735b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Smart-LNMIIT\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_efe368a964d734ea150d303e92129af3edc4b225\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lenovo\.android\build-cache\5e163dddd00b6433b0201c1581c67b04dcfca776\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="19696dc358ac668e341f28c41e3387d61ccdb81d">
+        <dex dex="G:\Smart-LNMIIT\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_157002711618c29ce46bd6fb9f09efa9efd08a7f\classes.dex" />
+    </item>
+
+</items>
