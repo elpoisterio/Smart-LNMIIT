@@ -43,6 +43,9 @@
     <string name="title_activity_notifications">Notifications</string>
     <string name="title_activity_faculty">Faculty</string>
     <string name="title_activity_branch">BranchActivity</string>
+    <string name="title_activity_edit_contact">EditContact</string>
+    <string name="title_activity_edit_year">EditYear</string>
+    <string name="title_activity_edit_courses">EditCourses</string>
 
 
 </resources>

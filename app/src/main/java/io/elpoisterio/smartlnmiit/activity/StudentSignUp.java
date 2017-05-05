@@ -77,6 +77,7 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
 
 
         avi = (AVLoadingIndicatorView) findViewById(R.id.avi);
+        initView();
         signupStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,13 +91,11 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
                     }
                 }, 0);
 
-
                 new Handler().postDelayed(new Runnable() {
 
                     @Override
                     public void run()
                     {
-
                         Intent intent=new Intent(getApplicationContext(),Home.class);
                         finish();
                         startActivity(intent);

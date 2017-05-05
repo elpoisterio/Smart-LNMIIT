@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.elpoisterio.smartlnmiit">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
 
     <application
         android:name="com.orm.SugarApp"
@@ -81,28 +81,27 @@
         <activity
             android:name=".activity.Notifications"
             android:label="@string/title_activity_notifications"
-
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.BranchActivity"
             android:label="@string/title_activity_branch"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <service
-            android:name=".service.FirebaseMessaging">
+            android:theme="@style/AppTheme.NoActionBar" />
+        android:theme="@style/AppTheme.NoActionBar"/>
+        <service android:name=".service.FirebaseMessaging">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service
-            android:name=".service.FirebaseID">
+        <service android:name=".service.FirebaseID">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
-
+        <activity
+            android:name=".activity.EditProfile"
+            android:label="@string/title_activity_edit_contact"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
